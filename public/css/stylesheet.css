@@ -1,0 +1,142 @@
+body {
+    background-color: #141414;
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+    width: 100%;
+    margin: 0;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    color: white;
+}
+
+header {
+    z-index: 501;
+    padding: 1.5em 0em;
+    width: 100%;
+    font-size: 1.3em;
+    color: white;
+    background-color: rgba(35, 56, 74);
+    top: 0;
+    position: sticky;
+}
+
+.header>h2 {
+    margin: 0;
+    padding-left: 2.5em;
+}
+
+form {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    padding: 1em;
+    background-color: rgba(35, 56, 74);
+}
+
+input {
+    width: 90%;
+    margin-right: 1em;
+    padding: 1em 1em;
+    text-align: left;
+}
+
+button {
+    padding: 1.150em 2em;
+    font-family: 'Montserrat', sans-serif;
+    border: none;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+
+#message-output-list, 
+#feedback-output {
+    padding: 2em 1.5em 8em;
+}
+
+.message-output {
+    padding: .5em 1em;
+    width: fit-content;
+    border-radius: 1em;
+    margin: 1em;
+    background-color: white;
+    color: black;
+    text-align: right;
+}
+
+#feedback-output {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: -8%;
+}
+
+#new-feedback {
+    padding: 1em;
+    width: fit-content;
+    border-radius: 1em;
+    margin: 1em;
+    margin: 0 auto;
+    color: white;
+    text-align: right;
+}
+
+.join {
+    background-color: #d8b9c3;
+    margin-left: auto;
+}
+
+.join > p {
+    color: Black;
+}
+
+.disconnect {
+    background-color: #f1f3f4;
+    margin-left: auto;
+    opacity: .7;
+}
+
+.disconnect > p {
+    color: black;
+    opacity: .5;
+}
+
+.own-message {
+    background-color: #363062;
+    margin-left: auto;
+}
+
+.own-message > p {
+    color: white;
+}
+
+.their-message {
+    background-color: #4d4c7d;
+}
+
+.their-message > p {
+    color: white;
+}
+
+.connect {
+    background-color: #4d4c7d;
+}
+
+.connect > p{
+    color: white;
+}
