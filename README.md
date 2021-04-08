@@ -209,6 +209,11 @@ In deze test sessie hebben wij kennis gemaakt met Eric en heeft hij ons van alle
   
   Zelf heb ik hier ook last van. Ik gebruik vaak emoticons aan het einde van mijn zinnen om op deze manier de zin wat informeler over te laten komen. Dit gaat af en toe fout waardoor de hele zin in een andere context wordt opgevallen. Dit wil ik dus gaan verkomen in mijn applicaties om eigenlijk zo min mogelijk tot niet gebruik te maken van emoticons. 
   
+  > Without the benefit of body language, you run a higher risk of misinterpreting the meaning of
+communications. You don't see that wink after a sarcastic statement. You don't know how to
+interpret that exclamation point (is it excitement or anger?). You don't know if a one-word
+statement of acknowledgement – like "Noted" – means anything more than what it is.
+  
   
 </details>
 
@@ -219,6 +224,7 @@ In deze test sessie hebben wij kennis gemaakt met Eric en heeft hij ons van alle
 - [Kleuren onderzoek](https://www.creativebloq.com/web-design/12-colours-and-emotions-they-evoke-61515112) - Onderzoek voor kleuren
 - [Kleuren onderzoek](https://tvtropes.org/pmwiki/pmwiki.php/Main/ColourCodedEmotions) - extra informatie over kleuren
 - [Understanding body language](https://www.verywellmind.com/understand-body-language-and-facial-expressions-4147228) - goed artikel voor het begrijpen van body language
+- [Body language barriers](https://lah.elearningontario.ca/CMS/public/exported_courses/GLS4O/exported/GLS4OU01/GLS4OU01/GLS4OU01A04/_teacher/axerosolutions.com-HowtoAvoidtheCommunicationBarriersofChatandText.pdf) - PDF over body language in chats
 
 
 ## Credits
