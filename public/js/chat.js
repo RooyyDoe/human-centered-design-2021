@@ -1,8 +1,9 @@
 const socket = io();
 
+const inputs = document.querySelectorAll('input[type=radio]')
+
 const messageForm = document.getElementById('send-container')
 const messageInput = document.getElementById('message')
-// const name = document.getElementById('name')
 const btn = document.getElementById('send-button')
 const output = document.getElementById('message-output-list')
 const feedback = document.getElementById('new-feedback')
@@ -56,7 +57,6 @@ messageForm.addEventListener('submit', event => {
 
 messageInput.addEventListener('keypress', () => {
     socket.emit('typing-message', name)
-    console.log(name)
     clearTimeout(timeout)
     timeout = setTimeout(timeoutFunction, 1000)
 })
@@ -68,7 +68,7 @@ function timeoutFunction() {
 function appendMessage(message, style) {
     const messageElement = document.createElement('div')
     messageElement.classList.add('message-output')
-    messageElement.classList.add(style);
+    messageElement.classList.add(style)
 
     const newMessage = document.createElement('p')
     newMessage.classList.add('new-message')
@@ -83,3 +83,32 @@ function scrollDown() {
     //https://exceptionshub.com/scroll-automatically-to-the-bottom-of-the-page.html
     window.scrollTo(0, document.body.scrollHeight);
 }
+
+// const emotionalInputs = (inputs, message) => {
+//     const message = document.querySelector('.message-output')
+
+//     inputs.forEach(input => {
+//         input.addEventListener('click', () => {
+//             if(input.value === 'happy') {
+//                 message.classList.add('happy')
+//             } else if(input.value === 'angry'){
+                
+//             } else if(input.value === 'excitment'){
+                
+//             } else if(input.value === 'desire'){
+                
+//             } else if(input.value === 'neutral'){
+                
+//             } else if(input.value === 'sad'){
+                
+//             } else if(input.value === 'disgust'){
+                
+//             } else if(input.value === 'confused'){
+                
+//             }
+//         })
+//     })
+
+// }
+
+// emotionalInputs(inputs)

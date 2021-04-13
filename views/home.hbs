@@ -1,5 +1,7 @@
 {{> header}}
 
+<figure id="background-image" title="Gaming survey background image"></figure>
+
 <div id="message-output-list">
 
 </div>
@@ -10,6 +12,76 @@
 </div>
 
 <form id="send-container">
-    <input id="message" type="text" autocomplete="off" placeholder="Type your message...">
-    <button type="submit" id="send-button">Send!</button>
+    <fieldset id="radio-button">
+        <legend>Select how you feel:</legend>
+        <input type="radio" name="emotion" id="happy" value="happy" required>
+        <label for="happy">Happy</label>
+
+        <input type="radio" name="emotion" id="angry" value="angry" required>
+        <label for="angry">Angry</label>
+
+        <input type="radio" name="emotion" id="excitement" value="excitement" required>
+        <label for="excitement">Excitement</label>
+
+        <input type="radio" name="emotion" id="desire" value="desire" required>
+        <label for="desire">Desire</label>
+
+        <input type="radio" name="emotion" id="neutral" value="neutral" required checked>
+        <label for="neutral">Neutral</label>
+
+        <input type="radio" name="emotion" id="sad" value="sad" required>
+        <label for="sad">Sad</label>
+
+        <input type="radio" name="emotion" id="fear" value="fear" required>
+        <label for="fear">Fear</label>
+
+        <input type="radio" name="emotion" id="disgust" value="disgust" required>
+        <label for="disgust">Disgust</label>
+
+        <input type="radio" name="emotion" id="confused" value="confused" required>
+        <label for="confused">Confused</label>
+    </fieldset>
+    <div class="message-box-wrapper">
+        <input type="text" id="message" autocomplete="off" placeholder="Type your message...">
+        <button type="submit" id="send-button">Send!</button>
+    </div>
+
 </form>
+
+<div class="color-legenda">
+    <label for="happy">Happy
+        <input type="color" name="color-emotion" id="color-happy" value="#FCE205" required>
+    </label>
+
+    <label for="angry">Angry
+        <input type="color" name="color-emotion" id="color-angry" value="#B80F0A" required>
+    </label>
+
+    <label for="excitement">Excitement
+        <input type="color" name="color-emotion" id="color-excitement" value="#964000" required>
+    </label>
+
+    <label for="desire">Desire
+        <input type="color" name="color-emotion" id="color-desire" value="#FE5BAC" required>
+    </label>
+
+    <label for="neutral">Neutral
+        <input type="color" name="color-emotion" id="color-neutral" value="#777B7E" required checked>
+    </label>
+
+    <label for="sad">Sad
+        <input type="color" name="color-emotion" id="color-sad" value="#95C8D8" required>
+    </label>
+
+    <label for="fear">Fear
+        <input type="color" name="color-emotion" id="color-fear" value="#311432" required>
+    </label>
+
+    <label for="disgust">Disgust
+        <input type="color" name="color-emotion" id="color-disgust" value="#0B6623" required>
+    </label>
+
+    <label for="confused">Confused
+        <input type="color" name="color-emotion" id="color-confused" value="#48494B" required>
+    </label>
+</div>
