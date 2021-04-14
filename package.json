@@ -12,10 +12,6 @@
     "url": "git+https://github.com/RooyyDoe/real-time-chat-app.git"
   },
   "keywords": [
-    "bad",
-    "word",
-    "chat",
-    "app"
   ],
   "author": "Roy Kuijper",
   "license": "ISC",
@@ -24,6 +20,7 @@
   },
   "homepage": "https://github.com/RooyyDoe/real-time-chat-app#readme",
   "dependencies": {
+    "animate.css": "^4.1.1",
     "express": "^4.17.1",
     "express-handlebars": "^4.0.3",
     "handlebars": "^4.7.6",

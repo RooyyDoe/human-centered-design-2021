@@ -27,13 +27,13 @@ io.on('connection', socket => {
     })
 
     socket.on('send-message', message => {
-        socket.broadcast.emit('their-chat-message', { message: message, name: users[socket.id] })
+        // socket.broadcast.emit('their-chat-message', { message: message, name: users[socket.id] })
         socket.emit('own-chat-message', message);
     })
 
-    socket.on('typing-message', name => {
-        socket.broadcast.emit('someone-is-typing', name)
-    })
+    // socket.on('typing-message', name => {
+    //     socket.broadcast.emit('someone-is-typing', name)
+    // })
 });
 
 // template engine
@@ -47,6 +47,10 @@ app.engine('hbs', hbs({
 
 app.get('/', function (req, res) {
     res.render('home.hbs')
+})
+
+app.get('/demo2', function (req, res) {
+    res.render('home2.hbs')
 })
 
 http.listen(port, () => console.log(`Example app listening on port ${port}!`));

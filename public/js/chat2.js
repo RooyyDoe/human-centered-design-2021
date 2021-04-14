@@ -8,6 +8,8 @@ const btn = document.getElementById('send-button')
 const output = document.getElementById('message-output-list')
 const feedback = document.getElementById('new-feedback')
 
+console.log('wtf')
+
 let name = prompt('What is your name?')
 let timeout
 
@@ -73,32 +75,52 @@ function appendMessage(message) {
     messageElement.classList.add('message-output')
 
     if(document.getElementById('happy').checked) {
-        messageElement.classList.add('happy')
+
+        messageElement.classList.add('animate__animated', 'animate__jello');
         newMessage.classList.add('new-message')
+
     } else if (document.getElementById('angry').checked) {
-        messageElement.classList.add('angry')
+
+        messageElement.classList.add('animate__animated', 'animate__shakeY');
         newMessage.classList.add('new-message')
+
     } else if (document.getElementById('excitement').checked) {
-        messageElement.classList.add('excitement')
+
+        messageElement.classList.add('animate__animated', 'animate__tada');
         newMessage.classList.add('new-message')
+
     } else if (document.getElementById('desire').checked) {
-        messageElement.classList.add('desire')
+
+        messageElement.classList.add('animate__animated', 'animate__heartBeat');
         newMessage.classList.add('new-message')
+
     } else if (document.getElementById('neutral').checked) {
-        messageElement.classList.add('neutral')
+
+        messageElement.classList.add('animate__animated', 'animate__fadeIn');
         newMessage.classList.add('new-message')
+
     } else if (document.getElementById('sad').checked) {
-        messageElement.classList.add('sad')
+        
+        messageElement.classList.add('animate__animated', 'animate__slideInLeft');
+        messageElement.style.setProperty('--animate-duration', '2.5s');
         newMessage.classList.add('new-message')
-    } else if (document.getElementById('fear').checked) {
-        messageElement.classList.add('fear')
+
+    } else if (document.getElementById('fear').checked) 
+    {
+        messageElement.classList.add('animate__animated', 'animate__flash');
+        messageElement.style.setProperty('--animate-duration', '2s');
         newMessage.classList.add('new-message')
+
     } else if (document.getElementById('disgust').checked) {
-        messageElement.classList.add('disgust')
+
+        messageElement.classList.add('animate__animated', 'animate__shakeX');
         newMessage.classList.add('new-message')
+
     } else if (document.getElementById('confused').checked) {
-        messageElement.classList.add('confused')
+
+        messageElement.classList.add('animate__animated', 'animate__wobble');
         newMessage.classList.add('new-message')
+
     }
 
     newMessage.innerText = message
