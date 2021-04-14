@@ -53,4 +53,8 @@ app.get('/demo2', function (req, res) {
     res.render('home2.hbs')
 })
 
+app.get('/demo3', function (req, res) {
+    res.render('home3.hbs')
+})
+
 http.listen(port, () => console.log(`Example app listening on port ${port}!`));

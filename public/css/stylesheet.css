@@ -175,12 +175,20 @@ button {
 
 .message-output {
   padding: 0.1em 1em;
-  width: fit-content;
+  width: 50%;
   border-radius: 0.5em;
   margin: 1em;
   background-color: white;
   color: black;
-  text-align: right;
+  text-align: left;
+}
+
+#message-output-list > p {
+  color: blue;
+  margin-top: -1em;
+  padding: 0.1em 1.8em;
+  opacity: 0.6;
+  font-style: italic;
 }
 
 ul {
