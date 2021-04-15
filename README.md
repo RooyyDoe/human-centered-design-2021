@@ -61,9 +61,9 @@ Eric is een ontwerper van 48 jaar. Hij heeft gestudeerd aan de HKU, interaction 
 
 In deze test sessie hebben wij kennis gemaakt met Eric en heeft hij ons van alles verteld over wat hij in het dagelijks leven doet. Ook hebben we twee klein schalige prototypes gemaakt om deze door Eric te laten testen. Naast deze kleine prototypes hebben wij hem ook dood gegooid met veel vragen om wat meer te weten te komen hoe Eric is in de omgang met bijvoorbeeld zijn computer. Alle verdere informatie is te vinden in het test verslag hieronder.
 
-[Test sessie #1](https://github.com/RooyyDoe/human-centered-design-2021/wiki/Test-sessie-1-Kennis-making-(Eric-Groot-Kormelink))
+[Test sessie #1](https://github.com/RooyyDoe/human-centered-design-2021/wiki/Test-sessie-1-Kennis-making-(Eric-Groot-Kormelink)
 
-### Onderzoek
+### Extra onderzoek na de test sessie
 
 <details>
   <summary>Onderzoek gericht op mijn concept</summary>
@@ -216,6 +216,24 @@ statement of acknowledgement – like "Noted" – means anything more than what 
   
   
 </details>
+
+
+### Tweede test sessie met Eric
+
+In de tweede test sessie had iedereen zijn eigen demo gemaakt om deze te laten zien aan Eric. In de eerste test hadden we getest hoe Eric het vond om voor de camera te staan en als je er overna denkt is dit inderdaad een simpele oplossing. Na nogmaals de cases doorlezen te hebben, wilde ik in mijn concept de focus meer leggen op hoe ik body language kan overbrengen via chat berichten. Hier had ik drie verschillende demo's voor gemaakt; Kleur, Animaties en status tekst onder een chat bericht. Naast deze demo's heb ik Eric ook een aantal extra vragen gesteld waar ik nog wat uigebreider antwoord op wilde hebben. 
+
+[Test sessie #2](https://github.com/RooyyDoe/human-centered-design-2021/wiki/Test-sessie-2-(Eric-Groot-Kormelink))
+[Uitleg demo](https://github.com/RooyyDoe/human-centered-design-2021/wiki/Uitleg-demo-test-sessie-2)
+
+## Conclusie
+
+### Study situation
+
+### Ignore Conventions
+
+### Prioritize identity
+
+### Add nonsense
 
 ## Sources
 
