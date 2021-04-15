@@ -63,7 +63,7 @@ In deze test sessie hebben wij kennis gemaakt met Eric en heeft hij ons van alle
 
 [Test sessie #1](https://github.com/RooyyDoe/human-centered-design-2021/wiki/Test-sessie-1-Kennis-making-(Eric-Groot-Kormelink)
 
-### Extra onderzoek na de test sessie
+#### Extra onderzoek na de test sessie
 
 <details>
   <summary>Onderzoek gericht op mijn concept</summary>
