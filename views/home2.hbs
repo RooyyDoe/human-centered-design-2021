@@ -1,58 +1,51 @@
-{{> header}}
+{{> comic-header}}
 
-<figure id="background-image" title="Gaming survey background image"></figure>
+<figure id="comic-background-image" title="Gaming survey background image"></figure>
 
-<div id="message-output-list">
+<div class="wrapper">
 
-</div>
-<div id="feedback-output">
-    <div class="feedback-output">
-        <p id="new-feedback"></p>
+    <div id="comic-message-output-list">
+
     </div>
-</div>
-
-<form id="send-container">
-    <fieldset id="radio-button">
-        <legend>Select how you feel:</legend>
-        <input type="radio" name="emotion" id="happy" value="happy" required>
-        <label for="happy">Happy</label>
-
-        <input type="radio" name="emotion" id="angry" value="angry" required>
-        <label for="angry">Angry</label>
-
-        <input type="radio" name="emotion" id="excitement" value="excitement" required>
-        <label for="excitement">Excitement</label>
-
-        <input type="radio" name="emotion" id="desire" value="desire" required>
-        <label for="desire">Desire</label>
-
-        <input type="radio" name="emotion" id="neutral" value="neutral" required checked>
-        <label for="neutral">Neutral</label>
-
-        <input type="radio" name="emotion" id="sad" value="sad" required>
-        <label for="sad">Sad</label>
-
-        <input type="radio" name="emotion" id="fear" value="fear" required>
-        <label for="fear">Fear</label>
-
-        <input type="radio" name="emotion" id="disgust" value="disgust" required>
-        <label for="disgust">Disgust</label>
-
-        <input type="radio" name="emotion" id="confused" value="confused" required>
-        <label for="confused">Confused</label>
-    </fieldset>
-    <div class="message-box-wrapper">
-        <input type="text" id="message" autocomplete="off" placeholder="Type your message...">
-        <button type="submit" id="send-button">Send!</button>
+    <div id="feedback-output">
+        <div class="feedback-output">
+            <p id="new-feedback"></p>
+        </div>
     </div>
 
-</form>
-
-<ul>
-    <li><a href="/">First demo</a></li>
-    <li><a href="/demo2">second demo</a></li>
-    <li><a href="/demo3">Third demo</a></li>
-</ul>
+    <div class="comic-form" id="send-container">
+        <h2>Select how you feel:</h2>
+        <div class="emotion-wrapper">
+            {{!-- <div class="comic-label">
+                <button id="happy" value="happy">Happy</button>
+            </div> --}}
+            <div class="comic-label">
+                <button id="angry" value="angry">Angry</button>
+            </div>
+            {{!-- <div class="comic-label">
+                <button id="excitement" value="excitement">Excitement</button>
+            </div> --}}
+            <div class="comic-label">
+                <button id="neutral" value="neutral">Neutral</button>
+            </div>
+            {{!-- <div class="comic-label">
+                <button id="sad" value="sad">Sad</button>
+            </div> --}}
+            <div class="comic-label">
+                <button id="fear" value="fear">Fear</button>
+            </div>
+            {{!-- <div class="comic-label">
+                <button id="disgust" value="disgust">Disgust</button>
+            </div> --}}
+            {{!-- <div class="comic-label">
+                <button id="confused" value="confused">Confused</button>
+            </div> --}}
+        </div>
+        <div class="message-box-wrapper">
+            <input type="text" id="comic-message" autocomplete="off" placeholder="Type your message...">
+        </div>
+    </div>
+</div>
 
 <script src="/socket.io/socket.io.js"></script>
 <script src="/js/chat2.js"></script>

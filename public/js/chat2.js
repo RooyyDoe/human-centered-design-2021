@@ -1,14 +1,12 @@
 const socket = io();
 
-const inputs = document.querySelectorAll('input[type=radio]')
+const inputs = document.querySelectorAll('button')
 
 const messageForm = document.getElementById('send-container')
-const messageInput = document.getElementById('message')
+const messageInput = document.getElementById('comic-message')
 const btn = document.getElementById('send-button')
-const output = document.getElementById('message-output-list')
+const output = document.getElementById('comic-message-output-list')
 const feedback = document.getElementById('new-feedback')
-
-console.log('wtf')
 
 let name = prompt('What is your name?')
 let timeout
@@ -50,85 +48,146 @@ socket.on('own-chat-message', message => {
 //     }
 // })
 
-messageForm.addEventListener('submit', event => {
-    event.preventDefault()
-    const message = messageInput.value
-    socket.emit('send-message', message)
-    messageInput.value = ''
+inputs.forEach(input => {
+    input.addEventListener('click', event => {
+        event.preventDefault()
+
+        // const userName = name
+
+        // console.log(userName)
+
+        const messageElement = document.createElement('div')
+        const newMessage = document.createElement('p')
+
+        messageElement.classList.add('message-output')
+
+        if(input.value === 'happy') {
+            const message = messageInput.value
+            newMessage.innerText = message
+
+            messageElement.classList.add('comic-happy')
+            messageElement.classList.add('animate__animated', 'animate__bounceIn');
+            newMessage.classList.add('new-message')
+
+            if(message) {
+                output.append(messageElement)
+                messageElement.append(newMessage)
+            }
+
+            messageInput.value = ''
+            scrollDown()
+        } else if(input.value === 'angry') {
+            const message = messageInput.value
+            newMessage.innerText = message
+
+            messageElement.classList.add('comic-angry')
+            messageElement.classList.add('animate__animated', 'animate__zoomIn');
+            messageElement.style.setProperty('--animate-duration', '.2s');
+            newMessage.classList.add('new-message')
+
+            if(message) {
+                output.append(messageElement)
+                messageElement.append(newMessage)
+            }
+
+            messageInput.value = ''
+            scrollDown()
+        } else if(input.value === 'excitement') {
+            const message = messageInput.value
+            newMessage.innerText = message
+
+            messageElement.classList.add('comic-excitement')
+            messageElement.classList.add('animate__animated', 'animate__tada');
+            newMessage.classList.add('new-message')
+
+            if(message) {
+                output.append(messageElement)
+                messageElement.append(newMessage)
+            }
+
+            messageInput.value = ''
+            scrollDown()
+        } else if(input.value === 'neutral') {
+            const message = messageInput.value
+            newMessage.innerText = message
+
+            messageElement.classList.add('comic-neutral')
+            messageElement.classList.add('animate__animated', 'animate__zoomIn');
+            messageElement.style.setProperty('--animate-duration', '.2s');
+            newMessage.classList.add('new-message')
+
+            if(message) {
+                output.append(messageElement)
+                messageElement.append(newMessage)
+            }
+
+            messageInput.value = ''
+            scrollDown()
+        } else if(input.value === 'sad') {
+            const message = messageInput.value
+            newMessage.innerText = message
+
+            messageElement.classList.add('comic-sad')
+            messageElement.classList.add('animate__animated', 'animate__fadeIn');
+            messageElement.style.setProperty('--animate-duration', '3s');
+            newMessage.classList.add('new-message')
+            
+            if(message) {
+                output.append(messageElement)
+                messageElement.append(newMessage)
+            }
+
+            messageInput.value = ''
+            scrollDown()
+        } else if(input.value === 'fear') {
+            const message = messageInput.value
+            newMessage.innerText = message
+
+            messageElement.classList.add('comic-fear')
+            messageElement.classList.add('animate__animated', 'animate__zoomIn');
+            messageElement.style.setProperty('--animate-duration', '.2s');
+            newMessage.classList.add('new-message')
+
+            if(message) {
+                output.append(messageElement)
+                messageElement.append(newMessage)
+            }
+
+            messageInput.value = ''
+            scrollDown()
+        } else if(input.value === 'disgust') {
+            const message = messageInput.value
+            newMessage.innerText = message
+
+            messageElement.classList.add('comic-disgust')
+            messageElement.classList.add('animate__animated', 'animate__swing');
+            newMessage.classList.add('new-message')
+
+            if(message) {
+                output.append(messageElement)
+                messageElement.append(newMessage)
+            }
+
+            messageInput.value = ''
+            scrollDown()
+        } else if(input.value === 'confused') {
+            const message = messageInput.value
+            newMessage.innerText = message
+
+            messageElement.classList.add('comic-confused')
+            messageElement.classList.add('animate__animated', 'animate__shakeX');
+            newMessage.classList.add('new-message')
+
+            if(message) {
+                output.append(messageElement)
+                messageElement.append(newMessage)
+            }
+
+            messageInput.value = ''
+            scrollDown()
+        }
+    })
 })
-
-// messageInput.addEventListener('keypress', () => {
-//     socket.emit('typing-message', name)
-//     clearTimeout(timeout)
-//     timeout = setTimeout(timeoutFunction, 1000)
-// })
-
-// function timeoutFunction() {
-//     socket.emit("typing-message", false);
-// }
-
-function appendMessage(message) {
-
-    const messageElement = document.createElement('div')
-    const newMessage = document.createElement('p')
-
-    messageElement.classList.add('message-output')
-
-    if(document.getElementById('happy').checked) {
-
-        messageElement.classList.add('animate__animated', 'animate__jello');
-        newMessage.classList.add('new-message')
-
-    } else if (document.getElementById('angry').checked) {
-
-        messageElement.classList.add('animate__animated', 'animate__shakeY');
-        newMessage.classList.add('new-message')
-
-    } else if (document.getElementById('excitement').checked) {
-
-        messageElement.classList.add('animate__animated', 'animate__tada');
-        newMessage.classList.add('new-message')
-
-    } else if (document.getElementById('desire').checked) {
-
-        messageElement.classList.add('animate__animated', 'animate__heartBeat');
-        newMessage.classList.add('new-message')
-
-    } else if (document.getElementById('neutral').checked) {
-
-        messageElement.classList.add('animate__animated', 'animate__fadeIn');
-        newMessage.classList.add('new-message')
-
-    } else if (document.getElementById('sad').checked) {
-        
-        messageElement.classList.add('animate__animated', 'animate__slideInLeft');
-        messageElement.style.setProperty('--animate-duration', '2.5s');
-        newMessage.classList.add('new-message')
-
-    } else if (document.getElementById('fear').checked) 
-    {
-        messageElement.classList.add('animate__animated', 'animate__flash');
-        messageElement.style.setProperty('--animate-duration', '2s');
-        newMessage.classList.add('new-message')
-
-    } else if (document.getElementById('disgust').checked) {
-
-        messageElement.classList.add('animate__animated', 'animate__shakeX');
-        newMessage.classList.add('new-message')
-
-    } else if (document.getElementById('confused').checked) {
-
-        messageElement.classList.add('animate__animated', 'animate__wobble');
-        newMessage.classList.add('new-message')
-
-    }
-
-    newMessage.innerText = message
-
-    output.append(messageElement)
-    messageElement.append(newMessage)
-    scrollDown()
-}
 
 function scrollDown() {
     //https://exceptionshub.com/scroll-automatically-to-the-bottom-of-the-page.html

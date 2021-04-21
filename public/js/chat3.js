@@ -8,12 +8,10 @@ const btn = document.getElementById('send-button')
 const output = document.getElementById('message-output-list')
 const feedback = document.getElementById('new-feedback')
 
-console.log('wtf')
-
 let name = prompt('What is your name?')
 let timeout
 
-if (name == undefined || name == '') {
+if (name === undefined || name === '') {
     name = 'Guest';
 }
 
@@ -77,7 +75,7 @@ function appendMessage(message) {
 
     if(document.getElementById('happy').checked) {
 
-        emotionMessage.textContent = 'Feels happy 😁'
+        emotionMessage.textContent = name + 'Feels happy 😁'
         newMessage.classList.add('new-message')
 
     } else if (document.getElementById('angry').checked) {
