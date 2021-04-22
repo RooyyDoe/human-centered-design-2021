@@ -8,7 +8,7 @@ Voor dit vak krijg je een ontwerp-opdracht die je gaat maken voor 1 mens. Een ec
 
 ### Probleem stelling
 
-> #### Voor Eric zijn emoji’s niet goed genoeg. Wij wil betere en krachtigere tools om emotie en *body language* te gebruiken in chat apps zoals Signal.
+> #### Voor Eric zijn emoji’s niet goed genoeg. Eric wil betere en krachtigere tools om emotie en *body language* te gebruiken in chat apps zoals Signal.
 
 Uit de eerste test sessie kwam voornamelijk naar voren dat er teveel emoties bestaan zonder een duidelijke context. Wanneer er een emoticon of gif aan het einde van een bericht wordt geplaatst, kunnen sommige chat berichten volledig uit context worden over gebracht. Eric vertelde dat het ook moeilijk is om via een chat applicatie de body language van een persoon te zien, omdat je elkaar niet daadwerkelijk face to face kan zien. Op deze manier kunnen berichten snel uit de context vallen en kunnen er conflicten ontstaan die helemaal niet nodig zijn.
 
@@ -17,45 +17,47 @@ Uit de eerste test sessie kwam voornamelijk naar voren dat er teveel emoties bes
 In deze applicatie kan Eric zijn `body language` aangeven door middel van een `Emotie meter`. Hierin kan Eric een bepaalde `gevoels stemming` selecteren en zullen zijn chat berichten gebaseerd op deze meter veranderen. Deze `gevoels stemming` zal gebaseerd zijn op de meest voorkomende emoties die ik heb gevonden tijdens mijn onderzoek. Eric kan deze `Emotie meter` op elk moment tijdens het chatten aanpassen en kan dus op deze manier zijn `body language` doorgeven aan de persoon waarmee hij zit te chatten.
 
 
-### Install
+### Installatie
 
-**Clone the repository of the project**
+**Clone de repository van het project**
 
 ```
 git clone https://github.com/RooyyDoe/human-centered-design-2021.git
 ```
 
-**Navigate to the map**
+**Navigeer naar de map**
 
 ```
 cd human-centered-design-2021
 ```
 
-**Install dependencies**
+**Installeer dependencies**
 
 ```
 npm install
 ```
 
-**Run server in terminal**
+**Run de server in je terminal**
 
 ```
 npm run dev
 ```
 
-Server running on **localhost:5000**
+Server runt dan op: **localhost:5000**
 
-**Demo** also will be running live at [Loading... ]()
+**Demo** kun je ook bekijken op: [Loading... ]()
 
 ### Leerdoelen
 
-- [ ] _Leren hoe je (design) principles in een ontwerp kan toepassen._
-- [ ] _Leren hoe je moet testen en de resultaten gebruiken voor het verbeteren van je ontwerp._
-- [ ] _Leren hoe je een applicatie naar de wensen van de gebruiker kan personaliseren_
+- [x] _Leren hoe je (design) principles in een ontwerp kan toepassen._
+- [x] _Leren hoe je moet testen en de resultaten gebruiken voor het verbeteren van je ontwerp._
+- [x] _Leren hoe je een applicatie naar de wensen van de gebruiker kan personaliseren_
 
 ### Wie is Eric Groot Kormelink?
 
 Eric is een ontwerper van 48 jaar. Hij heeft gestudeerd aan de HKU, interaction design. Hij organiseert regelmatig design-avonden waar hij probeert om mensen met beperkingen samen te brengen met ontwerpers en makers. Eric zelf zit in een electrische rolstoel. Hij heeft niet de beschikking over de fijne motoriek. Hij houdt zich bezig met toegankelijkheid voor openbare omgevingen met betrekking tot mensen met een beperking.
+
+---
 
 ### Eerste test sessie met Eric
 
@@ -217,23 +219,34 @@ statement of acknowledgement – like "Noted" – means anything more than what 
   
 </details>
 
+---
 
 ### Tweede test sessie met Eric
 
-In de tweede test sessie had iedereen zijn eigen demo gemaakt om deze te laten zien aan Eric. In de eerste test hadden we getest hoe Eric het vond om voor de camera te staan en als je er overna denkt is dit inderdaad een simpele oplossing. Na nogmaals de cases doorlezen te hebben, wilde ik in mijn concept de focus meer leggen op hoe ik body language kan overbrengen via chat berichten. Hier had ik drie verschillende demo's voor gemaakt; Kleur, Animaties en status tekst onder een chat bericht. Naast deze demo's heb ik Eric ook een aantal extra vragen gesteld waar ik nog wat uigebreider antwoord op wilde hebben. 
+In de tweede test sessie had iedereen zijn eigen demo gemaakt om deze te laten zien aan Eric. In de eerste test hadden we getest hoe Eric het vond om voor de camera te staan en als je er overna denkt is dit inderdaad een simpele oplossing. Na nogmaals de cases doorlezen te hebben, wilde ik in mijn concept de focus meer leggen op hoe ik body language kan overbrengen via daadwerkelijke chat berichten. Hier had ik drie verschillende demo's voor gemaakt; Kleur, Animaties en status tekst onder een chat bericht. Naast deze demo's heb ik Eric ook een aantal extra vragen gesteld om wat extra informatie te krijgen tijdens mijn onderzoek.
 
 [Test sessie #2](https://github.com/RooyyDoe/human-centered-design-2021/wiki/Test-sessie-2-(Eric-Groot-Kormelink))
 [Uitleg demo](https://github.com/RooyyDoe/human-centered-design-2021/wiki/Uitleg-demo-test-sessie-2)
 
+### Laatste test sessie met Eric
+
+In onze laatste test sessie had iedereen weer een demo klaar staan om door Eric te laten testen. Wat ik merkte tijdens de testen was voornamelijk dat iedereen die `body language` als cases had gekozen heel snel naar de oplossing: **Camera** ging. Op deze manier kan je natuurlijk heel makkelijke `body language` overbrengen. Zelf had ik na de vorige test al besloten dat ik dit niet wilde en had ik dus mijn demo's verder uitgebreid op mijn bevindingen van de tweede test. Eric had in de tweede test verschillende punten van feedback gegeven waarnaar ik zou kunnen kijken. Dit heb ik uiteraard mee genomen in deze demo.
+
+[Test sessie #3](https://github.com/RooyyDoe/human-centered-design-2021/wiki/Test-sessie-3-(Eric-Groot-Kormelink))
+[Uitleg demo](https://github.com/RooyyDoe/human-centered-design-2021/wiki/Uitleg-demo-test-sessie-3)
+
+### 4 Design Principles
+
+[Design Principles with Eric](https://github.com/RooyyDoe/human-centered-design-2021/wiki/Design-principles)
+
 ## Conclusie
 
-### Study situation
+### User needs
 
-### Ignore Conventions
+### Testen
 
-### Prioritize identity
+### Reflectie
 
-### Add nonsense
 
 ## Sources
 
@@ -246,3 +259,5 @@ In de tweede test sessie had iedereen zijn eigen demo gemaakt om deze te laten z
 
 
 ## Credits
+
+[Me - Myself and I](https://www.youtube.com/watch?v=P8-9mY-JACM)
