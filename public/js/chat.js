@@ -20,15 +20,47 @@ if (name == undefined || name == '') {
 socket.emit('new-user', name)
 
 
-socket.on('own-chat-message', message => {
+socket.on('own-chat-message', (message, name, emotion) => {
     feedback.innerText = ''
-    appendMessage(`${message}`)
+    if(emotion === 'happy') {
+        happyMessage(message, name)
+    } else if(emotion === 'angry') {
+        angryMessage(message, name)
+    } else if(emotion === 'anxious') {
+        anxiousMessage(message, name)
+    } else if(emotion === 'sad') {
+        sadMessage(message, name)
+    } else if(emotion === 'confused') {
+        confusedMessage(message, name)
+    } else if(emotion === 'excitement') {
+        excitementMessage(message, name)
+    } else if(emotion === 'disgust') {
+        disgustMessage(message, name)
+    } else {
+        normalMessage(message, name)
+    }
 })
 
-// socket.on('their-chat-message', data => {
-//     feedback.innerText = ''
-//     appendMessage(`${data.name}: ${data.message}`, 'their-message')
-// })
+socket.on('their-chat-message', (message, name, emotion) => {
+    feedback.innerText = ''
+    if(emotion === 'happy') {
+        happyMessage(message, name)
+    } else if(emotion === 'angry') {
+        angryMessage(message, name)
+    } else if(emotion === 'anxious') {
+        anxiousMessage(message, name)
+    } else if(emotion === 'sad') {
+        sadMessage(message, name)
+    } else if(emotion === 'confused') {
+        confusedMessage(message, name)
+    } else if(emotion === 'excitement') {
+        excitementMessage(message, name)
+    } else if(emotion === 'disgust') {
+        disgustMessage(message, name)
+    } else {
+        normalMessage(message, name)
+    }
+})
 
 // socket.on('user-connected', name => {
 //     appendMessage(`Say hello to ${name}`, 'connect')
@@ -39,16 +71,16 @@ socket.on('own-chat-message', message => {
 //     appendMessage(`${name} left the server`, 'disconnect')
 // })
 
-// socket.on('someone-is-typing', name => {
-//     if (name) {
-//         feedback.innerText = `${name} is typing a message...`
-//         console.log('test')
-//     } else {
-//         feedback.innerText = ''
-//     }
-// })
-
 messageInput.addEventListener('keyup', (event) => {
+    if (event.keyCode === 13) {
+        event.preventDefault();
+        const message = messageInput.value
+        socket.emit('send-message', message)
+        messageInput.value = ''
+    }
+})
+
+const normalMessage = (message, username) => {
 
     const messageElement = document.createElement('div')
     const newMessage = document.createElement('p')
@@ -56,175 +88,240 @@ messageInput.addEventListener('keyup', (event) => {
 
     messageElement.classList.add('message-output')
 
-    event.preventDefault();
-    if (event.keyCode === 13) {
+    newMessage.innerText = message
 
-        const message = messageInput.value
-        newMessage.innerText = message
+    messageElement.classList.add('neutral')
+    emotionMessage.textContent = username + ' is feeling neutral 😐'
+    messageElement.classList.add('animate__animated', 'animate__zoomIn');
+    messageElement.style.setProperty('--animate-duration', '.2s');
+    newMessage.classList.add('new-message')
 
-        messageElement.classList.add('neutral')
-        emotionMessage.textContent = name + ' is feeling normal 😊'
-        messageElement.classList.add('animate__animated', 'animate__zoomIn');
-        messageElement.style.setProperty('--animate-duration', '.2s');
-        newMessage.classList.add('new-message')
-
-        if(message) {
-            output.append(messageElement, emotionMessage)
-            messageElement.append(newMessage)
-        }
-
-        messageInput.value = ''
-        scrollDown()
+    if(message) {
+        output.append(messageElement, emotionMessage)
+        messageElement.append(newMessage)
     }
-})
+
+    messageInput.value = ''
+    scrollDown()
+}
+
+const happyMessage = (message, username) => {
+
+    const messageElement = document.createElement('div')
+    const newMessage = document.createElement('p')
+    const emotionMessage = document.createElement('p')
+
+    messageElement.classList.add('message-output')
+
+    newMessage.innerText = message
+
+    messageElement.classList.add('happy')
+    emotionMessage.textContent = username + ' is feeling happy 😁'
+    messageElement.classList.add('animate__animated', 'animate__bounceIn');
+    newMessage.classList.add('new-message')
+
+    if(message) {
+        output.append(messageElement, emotionMessage)
+        messageElement.append(newMessage)
+    }
+
+    messageInput.value = ''
+    scrollDown()
+}
+
+const angryMessage = (message, username) => {
+
+    const messageElement = document.createElement('div')
+    const newMessage = document.createElement('p')
+    const emotionMessage = document.createElement('p')
+
+    messageElement.classList.add('message-output')
+
+    newMessage.innerText = message
+
+    messageElement.classList.add('angry')
+    emotionMessage.textContent = username + ' is feeling angry 😠'
+    messageElement.classList.add('animate__animated', 'animate__shakeY');
+    newMessage.classList.add('new-message')
+
+    if(message) {
+        output.append(messageElement, emotionMessage)
+        messageElement.append(newMessage)
+    }
+
+    messageInput.value = ''
+    scrollDown()
+}
+
+const anxiousMessage = (message, username) => {
+
+    const messageElement = document.createElement('div')
+    const newMessage = document.createElement('p')
+    const emotionMessage = document.createElement('p')
+
+    messageElement.classList.add('message-output')
+
+    newMessage.innerText = message
+
+    messageElement.classList.add('anxious')
+    emotionMessage.textContent = username + ' is feeling anxious 😨'
+    messageElement.classList.add('animate__animated', 'animate__flash');
+    messageElement.style.setProperty('--animate-duration', '2s');
+    newMessage.classList.add('new-message')
+
+    if(message) {
+        output.append(messageElement, emotionMessage)
+        messageElement.append(newMessage)
+    }
+
+    messageInput.value = ''
+    scrollDown()
+}
+
+const sadMessage = (message, username) => {
+
+    const messageElement = document.createElement('div')
+    const newMessage = document.createElement('p')
+    const emotionMessage = document.createElement('p')
+
+    messageElement.classList.add('message-output')
+
+    newMessage.innerText = message
+
+    messageElement.classList.add('sad')
+    emotionMessage.textContent = username + ' is feeling sad 😔'
+    messageElement.classList.add('animate__animated', 'animate__fadeIn');
+    messageElement.style.setProperty('--animate-duration', '3s');
+    newMessage.classList.add('new-message')
+    
+    if(message) {
+        output.append(messageElement, emotionMessage)
+        messageElement.append(newMessage)
+    }
+
+    messageInput.value = ''
+    scrollDown()
+}
+
+const confusedMessage = (message, username) => {
+
+    const messageElement = document.createElement('div')
+    const newMessage = document.createElement('p')
+    const emotionMessage = document.createElement('p')
+
+    messageElement.classList.add('message-output')
+
+    newMessage.innerText = message
+
+    messageElement.classList.add('confused')
+    emotionMessage.textContent = name + ' is feeling confused 😲'
+    messageElement.classList.add('animate__animated', 'animate__shakeX');
+    newMessage.classList.add('new-message')
+
+    if(message) {
+        output.append(messageElement, emotionMessage)
+        messageElement.append(newMessage)
+    }
+
+    messageInput.value = ''
+    scrollDown()
+}
+
+const excitementMessage = (message, username) => {
+
+    const messageElement = document.createElement('div')
+    const newMessage = document.createElement('p')
+    const emotionMessage = document.createElement('p')
+
+    messageElement.classList.add('message-output')
+
+    newMessage.innerText = message
+
+    messageElement.classList.add('excitement')
+    emotionMessage.textContent = username + ' is feeling excited 😬'
+    messageElement.classList.add('animate__animated', 'animate__tada');
+    newMessage.classList.add('new-message')
+
+    if(message) {
+        output.append(messageElement, emotionMessage)
+        messageElement.append(newMessage)
+    }
+
+    messageInput.value = ''
+    scrollDown()
+}
+
+const disgustMessage = (message, username) => {
+
+    const messageElement = document.createElement('div')
+    const newMessage = document.createElement('p')
+    const emotionMessage = document.createElement('p')
+
+    messageElement.classList.add('message-output')
+
+    newMessage.innerText = message
+
+    messageElement.classList.add('disgust')
+    emotionMessage.textContent = username + ' is feeling disgusted 🤮'
+    messageElement.classList.add('animate__animated', 'animate__swing');
+    newMessage.classList.add('new-message')
+
+    if(message) {
+        output.append(messageElement, emotionMessage)
+        messageElement.append(newMessage)
+    }
+
+    messageInput.value = ''
+    scrollDown()
+}
+
 
 inputs.forEach(input => {
     input.addEventListener('click', event => {
         event.preventDefault()
 
-        // const userName = name
-
-        // console.log(userName)
-
-        const messageElement = document.createElement('div')
-        const newMessage = document.createElement('p')
-        const emotionMessage = document.createElement('p')
-
-        messageElement.classList.add('message-output')
-
         if(input.value === 'happy') {
+
             const message = messageInput.value
-            newMessage.innerText = message
-
-            messageElement.classList.add('happy')
-            emotionMessage.textContent = name + ' is feeling happy 😁'
-            messageElement.classList.add('animate__animated', 'animate__bounceIn');
-            newMessage.classList.add('new-message')
-
-            if(message) {
-                output.append(messageElement, emotionMessage)
-                messageElement.append(newMessage)
-            }
-
+            socket.emit('send-message', message, input.value)
             messageInput.value = ''
-            scrollDown()
-        } else if(input.value === 'angry') {
-            const message = messageInput.value
-            newMessage.innerText = message
-
-            messageElement.classList.add('angry')
-            emotionMessage.textContent = name + ' is feeling angry 😠'
-            messageElement.classList.add('animate__animated', 'animate__shakeY');
-            newMessage.classList.add('new-message')
-
-            if(message) {
-                output.append(messageElement, emotionMessage)
-                messageElement.append(newMessage)
-            }
-
-            messageInput.value = ''
-            scrollDown()
-        } else if(input.value === 'excitement') {
-            const message = messageInput.value
-            newMessage.innerText = message
-
-            messageElement.classList.add('excitement')
-            emotionMessage.textContent = name + ' is feeling excited 😬'
-            messageElement.classList.add('animate__animated', 'animate__tada');
-            newMessage.classList.add('new-message')
-
-            if(message) {
-                output.append(messageElement, emotionMessage)
-                messageElement.append(newMessage)
-            }
-
-            messageInput.value = ''
-            scrollDown()
-        } 
-        // else if(input.value === 'neutral') {
-        //     const message = messageInput.value
-        //     newMessage.innerText = message
-
-        //     messageElement.classList.add('neutral')
-        //     emotionMessage.textContent = name + ' is feeling normal 😊'
-        //     messageElement.classList.add('animate__animated', 'animate__zoomIn');
-        //     messageElement.style.setProperty('--animate-duration', '.2s');
-        //     newMessage.classList.add('new-message')
-
-        //     if(message) {
-        //         output.append(messageElement, emotionMessage)
-        //         messageElement.append(newMessage)
-        //     }
-
-        //     messageInput.value = ''
-        //     scrollDown()
-        // } 
-        else if(input.value === 'sad') {
-            const message = messageInput.value
-            newMessage.innerText = message
-
-            messageElement.classList.add('sad')
-            emotionMessage.textContent = name + ' is feeling sad 😔'
-            messageElement.classList.add('animate__animated', 'animate__fadeIn');
-            messageElement.style.setProperty('--animate-duration', '3s');
-            newMessage.classList.add('new-message')
             
-            if(message) {
-                output.append(messageElement, emotionMessage)
-                messageElement.append(newMessage)
-            }
+        } else if(input.value === 'angry') {
 
+            const message = messageInput.value
+            socket.emit('send-message', message, input.value)
             messageInput.value = ''
-            scrollDown()
+
+        } else if(input.value === 'excitement') {
+
+            const message = messageInput.value
+            socket.emit('send-message', message, input.value)
+            messageInput.value = ''
+
+        } else if(input.value === 'sad') {
+
+            const message = messageInput.value
+            socket.emit('send-message', message, input.value)
+            messageInput.value = ''
+
         } else if(input.value === 'anxious') {
+
             const message = messageInput.value
-            newMessage.innerText = message
-
-            messageElement.classList.add('anxious')
-            emotionMessage.textContent = name + ' is feeling anxious 😨'
-            messageElement.classList.add('animate__animated', 'animate__flash');
-            messageElement.style.setProperty('--animate-duration', '2s');
-            newMessage.classList.add('new-message')
-
-            if(message) {
-                output.append(messageElement, emotionMessage)
-                messageElement.append(newMessage)
-            }
-
+            socket.emit('send-message', message, input.value)
             messageInput.value = ''
-            scrollDown()
+
         } else if(input.value === 'disgust') {
+
             const message = messageInput.value
-            newMessage.innerText = message
-
-            messageElement.classList.add('disgust')
-            emotionMessage.textContent = name + ' is feeling disgusted 🤮'
-            messageElement.classList.add('animate__animated', 'animate__swing');
-            newMessage.classList.add('new-message')
-
-            if(message) {
-                output.append(messageElement, emotionMessage)
-                messageElement.append(newMessage)
-            }
-
+            socket.emit('send-message', message, input.value)
             messageInput.value = ''
-            scrollDown()
+
         } else if(input.value === 'confused') {
+
             const message = messageInput.value
-            newMessage.innerText = message
-
-            messageElement.classList.add('confused')
-            emotionMessage.textContent = name + ' is feeling confused 😲'
-            messageElement.classList.add('animate__animated', 'animate__shakeX');
-            newMessage.classList.add('new-message')
-
-            if(message) {
-                output.append(messageElement, emotionMessage)
-                messageElement.append(newMessage)
-            }
-
+            socket.emit('send-message', message, input.value)
             messageInput.value = ''
-            scrollDown()
+
         }
     })
 })

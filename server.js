@@ -26,9 +26,9 @@ io.on('connection', socket => {
         delete users[socket.id]
     })
 
-    socket.on('send-message', message => {
-        // socket.broadcast.emit('their-chat-message', { message: message, name: users[socket.id] })
-        socket.emit('own-chat-message', message);
+    socket.on('send-message', (message, emotion) => {
+        socket.broadcast.emit('their-chat-message', message, users[socket.id], emotion)
+        socket.emit('own-chat-message', message, users[socket.id], emotion);
     })
 
     // socket.on('typing-message', name => {
