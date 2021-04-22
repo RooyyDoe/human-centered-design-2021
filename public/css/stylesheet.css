@@ -35,11 +35,11 @@
 
 @font-face {
   font-family: "sad-font";
-  src: url("/fonts/PleaseDontLeaveNbp-0Led.ttf");
+  src: url("/fonts/Applespice-BOa3.ttf");
 }
 
 @font-face {
-  font-family: "fear-font";
+  font-family: "anxious-font";
   src: url("/fonts/24BoughsRegular-B3el.ttf");
 }
 
@@ -247,7 +247,7 @@ ul {
 li {
   font-size: 1em;
   padding: 0.5em;
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 
 li > a {
@@ -335,10 +335,11 @@ li > a {
 
 .sad {
   font-family: "sad-font", sans-serif;
+  font-size: 1.2em;
 }
 
-.fear {
-  font-family: "fear-font", sans-serif;
+.anxious {
+  font-family: "anxious-font", sans-serif;
 }
 
 .disgust {
@@ -483,7 +484,7 @@ li > a {
   padding-bottom: 6%;
 }
 
-.comic-fear {
+.comic-anxious {
   background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/whisper.svg);
   width: 25%;
   font-family: "SequentialistBB", sans-serif;

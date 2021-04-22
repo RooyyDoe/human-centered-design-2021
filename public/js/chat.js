@@ -48,6 +48,36 @@ socket.on('own-chat-message', message => {
 //     }
 // })
 
+messageInput.addEventListener('keyup', (event) => {
+
+    const messageElement = document.createElement('div')
+    const newMessage = document.createElement('p')
+    const emotionMessage = document.createElement('p')
+
+    messageElement.classList.add('message-output')
+
+    event.preventDefault();
+    if (event.keyCode === 13) {
+
+        const message = messageInput.value
+        newMessage.innerText = message
+
+        messageElement.classList.add('neutral')
+        emotionMessage.textContent = name + ' is feeling normal 😊'
+        messageElement.classList.add('animate__animated', 'animate__zoomIn');
+        messageElement.style.setProperty('--animate-duration', '.2s');
+        newMessage.classList.add('new-message')
+
+        if(message) {
+            output.append(messageElement, emotionMessage)
+            messageElement.append(newMessage)
+        }
+
+        messageInput.value = ''
+        scrollDown()
+    }
+})
+
 inputs.forEach(input => {
     input.addEventListener('click', event => {
         event.preventDefault()
@@ -110,24 +140,26 @@ inputs.forEach(input => {
 
             messageInput.value = ''
             scrollDown()
-        } else if(input.value === 'neutral') {
-            const message = messageInput.value
-            newMessage.innerText = message
+        } 
+        // else if(input.value === 'neutral') {
+        //     const message = messageInput.value
+        //     newMessage.innerText = message
 
-            messageElement.classList.add('neutral')
-            emotionMessage.textContent = name + ' is feeling normal 😊'
-            messageElement.classList.add('animate__animated', 'animate__zoomIn');
-            messageElement.style.setProperty('--animate-duration', '.2s');
-            newMessage.classList.add('new-message')
+        //     messageElement.classList.add('neutral')
+        //     emotionMessage.textContent = name + ' is feeling normal 😊'
+        //     messageElement.classList.add('animate__animated', 'animate__zoomIn');
+        //     messageElement.style.setProperty('--animate-duration', '.2s');
+        //     newMessage.classList.add('new-message')
 
-            if(message) {
-                output.append(messageElement, emotionMessage)
-                messageElement.append(newMessage)
-            }
+        //     if(message) {
+        //         output.append(messageElement, emotionMessage)
+        //         messageElement.append(newMessage)
+        //     }
 
-            messageInput.value = ''
-            scrollDown()
-        } else if(input.value === 'sad') {
+        //     messageInput.value = ''
+        //     scrollDown()
+        // } 
+        else if(input.value === 'sad') {
             const message = messageInput.value
             newMessage.innerText = message
 
@@ -144,12 +176,12 @@ inputs.forEach(input => {
 
             messageInput.value = ''
             scrollDown()
-        } else if(input.value === 'fear') {
+        } else if(input.value === 'anxious') {
             const message = messageInput.value
             newMessage.innerText = message
 
-            messageElement.classList.add('fear')
-            emotionMessage.textContent = name + ' is feeling feared 😨'
+            messageElement.classList.add('anxious')
+            emotionMessage.textContent = name + ' is feeling anxious 😨'
             messageElement.classList.add('animate__animated', 'animate__flash');
             messageElement.style.setProperty('--animate-duration', '2s');
             newMessage.classList.add('new-message')
