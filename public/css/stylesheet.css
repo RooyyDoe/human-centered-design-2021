@@ -302,11 +302,11 @@ li > a {
 }
 
 .their-message {
-  background-color: #4d4c7d;
+  background-color: white;
 }
 
 .their-message > p {
-  color: white;
+  color: black;
 }
 
 .connect {

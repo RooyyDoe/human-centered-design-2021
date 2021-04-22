@@ -23,40 +23,40 @@ socket.emit('new-user', name)
 socket.on('own-chat-message', (message, name, emotion) => {
     feedback.innerText = ''
     if(emotion === 'happy') {
-        happyMessage(message, name)
+        happyMessage(message, name, 'own-message')
     } else if(emotion === 'angry') {
-        angryMessage(message, name)
+        angryMessage(message, name, 'own-message')
     } else if(emotion === 'anxious') {
-        anxiousMessage(message, name)
+        anxiousMessage(message, name, 'own-message')
     } else if(emotion === 'sad') {
-        sadMessage(message, name)
+        sadMessage(message, name, 'own-message')
     } else if(emotion === 'confused') {
-        confusedMessage(message, name)
+        confusedMessage(message, name, 'own-message')
     } else if(emotion === 'excitement') {
-        excitementMessage(message, name)
+        excitementMessage(message, name, 'own-message')
     } else if(emotion === 'disgust') {
-        disgustMessage(message, name)
+        disgustMessage(message, name, 'own-message')
     } else {
-        normalMessage(message, name)
+        normalMessage(message, name, 'own-message')
     }
 })
 
 socket.on('their-chat-message', (message, name, emotion) => {
     feedback.innerText = ''
     if(emotion === 'happy') {
-        happyMessage(message, name)
+        happyMessage(message, name, 'their-message')
     } else if(emotion === 'angry') {
-        angryMessage(message, name)
+        angryMessage(message, name, 'their-message')
     } else if(emotion === 'anxious') {
-        anxiousMessage(message, name)
+        anxiousMessage(message, name, 'their-message')
     } else if(emotion === 'sad') {
-        sadMessage(message, name)
+        sadMessage(message, name, 'their-message')
     } else if(emotion === 'confused') {
-        confusedMessage(message, name)
+        confusedMessage(message, name, 'their-message')
     } else if(emotion === 'excitement') {
-        excitementMessage(message, name)
+        excitementMessage(message, name, 'their-message')
     } else if(emotion === 'disgust') {
-        disgustMessage(message, name)
+        disgustMessage(message, name, 'their-message')
     } else {
         normalMessage(message, name)
     }
@@ -80,13 +80,20 @@ messageInput.addEventListener('keyup', (event) => {
     }
 })
 
-const normalMessage = (message, username) => {
+const normalMessage = (message, username, style) => {
 
     const messageElement = document.createElement('div')
     const newMessage = document.createElement('p')
     const emotionMessage = document.createElement('p')
 
+    if (style === 'own-message') {
+        emotionMessage.style.textAlign = "right"
+    } else {
+        emotionMessage.style.textAlign = "left"
+    }
+
     messageElement.classList.add('message-output')
+    messageElement.classList.add(style);
 
     newMessage.innerText = message
 
@@ -105,13 +112,20 @@ const normalMessage = (message, username) => {
     scrollDown()
 }
 
-const happyMessage = (message, username) => {
+const happyMessage = (message, username, style) => {
 
     const messageElement = document.createElement('div')
     const newMessage = document.createElement('p')
     const emotionMessage = document.createElement('p')
 
+    if (style === 'own-message') {
+        emotionMessage.style.textAlign = "right"
+    } else {
+        emotionMessage.style.textAlign = "left"
+    }
+
     messageElement.classList.add('message-output')
+    messageElement.classList.add(style);
 
     newMessage.innerText = message
 
@@ -129,13 +143,20 @@ const happyMessage = (message, username) => {
     scrollDown()
 }
 
-const angryMessage = (message, username) => {
+const angryMessage = (message, username, style) => {
 
     const messageElement = document.createElement('div')
     const newMessage = document.createElement('p')
     const emotionMessage = document.createElement('p')
 
+    if (style === 'own-message') {
+        emotionMessage.style.textAlign = "right"
+    } else {
+        emotionMessage.style.textAlign = "left"
+    }
+
     messageElement.classList.add('message-output')
+    messageElement.classList.add(style);
 
     newMessage.innerText = message
 
@@ -153,13 +174,20 @@ const angryMessage = (message, username) => {
     scrollDown()
 }
 
-const anxiousMessage = (message, username) => {
+const anxiousMessage = (message, username, style) => {
 
     const messageElement = document.createElement('div')
     const newMessage = document.createElement('p')
     const emotionMessage = document.createElement('p')
 
+    if (style === 'own-message') {
+        emotionMessage.style.textAlign = "right"
+    } else {
+        emotionMessage.style.textAlign = "left"
+    }
+
     messageElement.classList.add('message-output')
+    messageElement.classList.add(style);
 
     newMessage.innerText = message
 
@@ -178,13 +206,20 @@ const anxiousMessage = (message, username) => {
     scrollDown()
 }
 
-const sadMessage = (message, username) => {
+const sadMessage = (message, username, style) => {
 
     const messageElement = document.createElement('div')
     const newMessage = document.createElement('p')
     const emotionMessage = document.createElement('p')
 
+    if (style === 'own-message') {
+        emotionMessage.style.textAlign = "right"
+    } else {
+        emotionMessage.style.textAlign = "left"
+    }
+
     messageElement.classList.add('message-output')
+    messageElement.classList.add(style);
 
     newMessage.innerText = message
 
@@ -203,18 +238,25 @@ const sadMessage = (message, username) => {
     scrollDown()
 }
 
-const confusedMessage = (message, username) => {
+const confusedMessage = (message, username, style) => {
 
     const messageElement = document.createElement('div')
     const newMessage = document.createElement('p')
     const emotionMessage = document.createElement('p')
 
+    if (style === 'own-message') {
+        emotionMessage.style.textAlign = "right"
+    } else {
+        emotionMessage.style.textAlign = "left"
+    }
+
     messageElement.classList.add('message-output')
+    messageElement.classList.add(style);
 
     newMessage.innerText = message
 
     messageElement.classList.add('confused')
-    emotionMessage.textContent = name + ' is feeling confused 😲'
+    emotionMessage.textContent = username + ' is feeling confused 😲'
     messageElement.classList.add('animate__animated', 'animate__shakeX');
     newMessage.classList.add('new-message')
 
@@ -227,13 +269,20 @@ const confusedMessage = (message, username) => {
     scrollDown()
 }
 
-const excitementMessage = (message, username) => {
+const excitementMessage = (message, username, style) => {
 
     const messageElement = document.createElement('div')
     const newMessage = document.createElement('p')
     const emotionMessage = document.createElement('p')
 
+    if (style === 'own-message') {
+        emotionMessage.style.textAlign = "right"
+    } else {
+        emotionMessage.style.textAlign = "left"
+    }
+
     messageElement.classList.add('message-output')
+    messageElement.classList.add(style);
 
     newMessage.innerText = message
 
@@ -251,13 +300,20 @@ const excitementMessage = (message, username) => {
     scrollDown()
 }
 
-const disgustMessage = (message, username) => {
+const disgustMessage = (message, username, style) => {
 
     const messageElement = document.createElement('div')
     const newMessage = document.createElement('p')
     const emotionMessage = document.createElement('p')
 
+    if (style === 'own-message') {
+        emotionMessage.style.textAlign = "right"
+    } else {
+        emotionMessage.style.textAlign = "left"
+    }
+
     messageElement.classList.add('message-output')
+    messageElement.classList.add(style);
 
     newMessage.innerText = message
 
