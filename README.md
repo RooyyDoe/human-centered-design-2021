@@ -2,7 +2,7 @@
 
 ## Opdracht
 
-### Ontwerpen met en voor echte mensen
+### Ontwerpen voor echte mensen
 
 Voor dit vak krijg je een ontwerp-opdracht die je gaat maken voor 1 mens. Een echt mens. Je moet je ontwerp 3 keer testen. Door te testen en te itereren ga je je ontwerp verbeteren. Uiteindelijk heb je een ontwerp dat exclusief gemaakt is voor 1 persoon. Een _exclusive design_ ... Wie is deze persoon dan voor wie je dit gaat maken? Wat vindt deze persoon leuk of juist niet? En hoe bedient deze persoon een computer?
 
@@ -20,7 +20,31 @@ In deze applicatie kan Eric zijn `body language` overbrengen door middel van het
 
 **Images still loading...**
 
-### Installatie
+### Inhoudsopgave
+
+- [Opdracht](#opdracht)
+  - [Ontwerp voor echte mensen](#ontwerpen-voor-echte-mensen)
+  - [Probleem stelling](#probleem-stelling)
+  - [Concept](#concept)
+- [Uiteindelijke Ontwerp](#uiteindelijke-ontwerp)
+- [Installatie](#installatie)
+- [Leerdoelen](#leerdoelen)
+- [Wie is Eric Groot Kormelink?](#wie-is-eric-groot-kormelink)
+  - [Eerste test sessie](#eerste-test-sessie-met-eric) 
+  - [Tweede test sessie](#tweede-test-sessie-met-eric)
+  - [Derde test sessie](#laatste-test-sessie-met-eric)
+  - [User scenario](#user-scenario)
+- [Conclusie](#conclusie)
+  - [4 Design Principles](#4-design-principles)
+  - [Uiteindelijke veranderingen](#uiteindelijke-veranderingen)
+  - [User needs](#user-needs)
+  - [Testen](#testen)
+  - [Reflectie](#reflectie)
+- [Bronnen](#bronnen)
+- [Credits](#credits)
+
+
+## Installatie
 
 **Clone de repository van het project**
 
@@ -50,13 +74,13 @@ Server runt dan op: **localhost:5000**
 
 **Demo** kun je ook bekijken op: [Eric's amazing chat app](https://amazing-chat-app-for-eric.herokuapp.com/)
 
-### Leerdoelen
+## Leerdoelen
 
 - [x] _Leren hoe je (design) principles in een ontwerp kan toepassen._
 - [x] _Leren hoe je moet testen en de resultaten gebruiken voor het verbeteren van je ontwerp._
 - [x] _Leren hoe je een applicatie naar de wensen van de gebruiker kan personaliseren_
 
-### Wie is Eric Groot Kormelink?
+## Wie is Eric Groot Kormelink?
 
 Eric is een ontwerper van 48 jaar. Hij heeft gestudeerd aan de HKU, interaction design. Hij organiseert regelmatig design-avonden waar hij probeert om mensen met beperkingen samen te brengen met ontwerpers en makers. Eric zelf zit in een electrische rolstoel. Hij heeft niet de beschikking over de fijne motoriek. Hij houdt zich bezig met toegankelijkheid voor openbare omgevingen met betrekking tot mensen met een beperking.
 
@@ -244,6 +268,12 @@ In onze laatste test sessie had iedereen weer een demo klaar staan om door Eric 
 
 ---
 
+### User scenario
+
+[Eric's user scenario](https://github.com/RooyyDoe/human-centered-design-2021/wiki/User-scenario)
+
+---
+
 ## Conclusie
 
 ### 4 Design Principles
@@ -282,7 +312,7 @@ Tijdens het testen had ik soms wel wat moeite met me mond houden en wilde ik al 
 
 Al met al vond ik het vak een grote leer curve hebben en moest ik in het begin even inkomen, maar nu we tegen het einde aanlopen ben ik erg blij met mijn resultaten.
 
-## Sources
+## Bronnen
 
 - [Mozilla Developer Network](https://developer.mozilla.org/en-US/) - Gebruik ik het meeste tijdens het programmeren
 - [Kleuren onderzoek](https://graf1x.com/color-psychology-emotion-meaning-poster/) - Onderzoek voor kleuren
@@ -295,3 +325,4 @@ Al met al vond ik het vak een grote leer curve hebben en moest ik in het begin e
 ## Credits
 
 [Me - Myself and I](https://www.youtube.com/watch?v=P8-9mY-JACM)
+[Eric the man himself](https://twitter.com/inva)
