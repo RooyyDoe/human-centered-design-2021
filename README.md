@@ -244,6 +244,8 @@ In onze laatste test sessie had iedereen weer een demo klaar staan om door Eric 
 
 ---
 
+## Conclusie
+
 ### 4 Design Principles
 
 [Design Principles with Eric](https://github.com/RooyyDoe/human-centered-design-2021/wiki/Design-principles)
@@ -253,8 +255,6 @@ In onze laatste test sessie had iedereen weer een demo klaar staan om door Eric 
 ### Uiteindelijke veranderingen
 
 **Veranderingen...**
-
-## Conclusie
 
 ### User needs
 
