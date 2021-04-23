@@ -320,6 +320,7 @@ Al met al vond ik het vak een grote leer curve hebben en moest ik in het begin e
 - [Kleuren onderzoek](https://tvtropes.org/pmwiki/pmwiki.php/Main/ColourCodedEmotions) - extra informatie over kleuren
 - [Understanding body language](https://www.verywellmind.com/understand-body-language-and-facial-expressions-4147228) - goed artikel voor het begrijpen van body language
 - [Body language barriers](https://lah.elearningontario.ca/CMS/public/exported_courses/GLS4O/exported/GLS4OU01/GLS4OU01/GLS4OU01A04/_teacher/axerosolutions.com-HowtoAvoidtheCommunicationBarriersofChatandText.pdf) - PDF over body language in chats
+- [4 design principles](https://exclusive-design.vasilis.nl/) - information about the principles
 
 
 ## Credits
