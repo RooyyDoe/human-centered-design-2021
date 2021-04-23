@@ -14,8 +14,11 @@ Uit de eerste test sessie kwam voornamelijk naar voren dat er teveel emoties bes
 
 ### Concept
 
-In deze applicatie kan Eric zijn `body language` aangeven door middel van een `Emotie meter`. Hierin kan Eric een bepaalde `gevoels stemming` selecteren en zullen zijn chat berichten gebaseerd op deze meter veranderen. Deze `gevoels stemming` zal gebaseerd zijn op de meest voorkomende emoties die ik heb gevonden tijdens mijn onderzoek. Eric kan deze `Emotie meter` op elk moment tijdens het chatten aanpassen en kan dus op deze manier zijn `body language` doorgeven aan de persoon waarmee hij zit te chatten.
+In deze applicatie kan Eric zijn `body language` overbrengen door middel van het sturen van berichten. Wanneer Eric een bericht heeft getypt kan hij deze versturen door op een van de `emotie knoppen` te drukken. Als Eric geen specifieke emotie wil geven aan een bericht kan hij op enter klikken om een neutraal bericht te versturen. De `emotie knoppen` zijn gebaseerd op de meest voorkomende emoties vanuit het dagelijks leven van de mens. Om de `body language` door te geven aan de andere persoon maakt deze applicatie gebruik van **animaties, lettertype en een emotie status**.
 
+## Uiteindelijke ontwerp
+
+**Images still loading...**
 
 ### Installatie
 
@@ -45,7 +48,7 @@ npm run dev
 
 Server runt dan op: **localhost:5000**
 
-**Demo** kun je ook bekijken op: [Loading... ]()
+**Demo** kun je ook bekijken op: [Eric's amazing chat app](https://amazing-chat-app-for-eric.herokuapp.com/)
 
 ### Leerdoelen
 
@@ -226,6 +229,7 @@ statement of acknowledgement – like "Noted" – means anything more than what 
 In de tweede test sessie had iedereen zijn eigen demo gemaakt om deze te laten zien aan Eric. In de eerste test hadden we getest hoe Eric het vond om voor de camera te staan en als je er overna denkt is dit inderdaad een simpele oplossing. Na nogmaals de cases doorlezen te hebben, wilde ik in mijn concept de focus meer leggen op hoe ik body language kan overbrengen via daadwerkelijke chat berichten. Hier had ik drie verschillende demo's voor gemaakt; Kleur, Animaties en status tekst onder een chat bericht. Naast deze demo's heb ik Eric ook een aantal extra vragen gesteld om wat extra informatie te krijgen tijdens mijn onderzoek.
 
 [Test sessie #2](https://github.com/RooyyDoe/human-centered-design-2021/wiki/Test-sessie-2-(Eric-Groot-Kormelink))
+
 [Uitleg demo](https://github.com/RooyyDoe/human-centered-design-2021/wiki/Uitleg-demo-test-sessie-2)
 
 ### Laatste test sessie met Eric
@@ -233,6 +237,7 @@ In de tweede test sessie had iedereen zijn eigen demo gemaakt om deze te laten z
 In onze laatste test sessie had iedereen weer een demo klaar staan om door Eric te laten testen. Wat ik merkte tijdens de testen was voornamelijk dat iedereen die `body language` als cases had gekozen heel snel naar de oplossing: **Camera** ging. Op deze manier kan je natuurlijk heel makkelijke `body language` overbrengen. Zelf had ik na de vorige test al besloten dat ik dit niet wilde en had ik dus mijn demo's verder uitgebreid op mijn bevindingen van de tweede test. Eric had in de tweede test verschillende punten van feedback gegeven waarnaar ik zou kunnen kijken. Dit heb ik uiteraard mee genomen in deze demo.
 
 [Test sessie #3](https://github.com/RooyyDoe/human-centered-design-2021/wiki/Test-sessie-3-(Eric-Groot-Kormelink))
+
 [Uitleg demo](https://github.com/RooyyDoe/human-centered-design-2021/wiki/Uitleg-demo-test-sessie-3)
 
 ### 4 Design Principles
@@ -243,9 +248,23 @@ In onze laatste test sessie had iedereen weer een demo klaar staan om door Eric 
 
 ### User needs
 
+Tijdens de kennis making met Eric kom je natuurlijk achter veel dingen. Wat voor persoon hij is en hoe hij zich gedraagd tijdens de test gesprekken, maar ook hoeveel moeite die heeft met zijn disability. Ook al heeft Eric deze disability het voelt niet alsof hij veel minder kan dan dat wij kunnen op het internet. Hij kan perfect overweg met zijn muis en toetsenbord, maar heeft alleen moeilijkheden met toets combinaties en druk zetten op een punt. Met dit soort moeilijkheden moet je dan rekening houden tijdens het maken van de prototypes. Als je kijkt naar de design principes die we moeten gebruiken dan denk je bij de user needs al snel aan `study situation` en `Prioritize identity`.
+
+Tijdens het testen kom je achter de identiteit van Eric, wat hij leuk vind om te doen en waar hij zich mee bezig houd. Op deze manier kom je al snel achter wat de user needs zijn van Eric en kan je dit mee nemen in je prototypes. Wanneer je weet wat Eric leuk vind kan je dit in je achterhoofd houden bij het verzinnen van een concept en daar dan op verder itereren. 
+
 ### Testen
 
+Wij hebben als groep drie test sessie gehad met Eric. Tijdens de eerste test sessie hadden we een aantal vragen voor Eric opgesteld en een test demo gemaakt. Deze demo was gebaseerd op de gebruik van de camera en emotie herkenning. Dit werd goed opgepakt door Eric en hij vertelde ook direct dat hij dit al had verwacht. Doordat Eric deze opmerking had gemaakt wilde ik gaan proberen om de `body language` daadwerkelijke te laten overbrengen tijdens het chatten met een andere persoon.
+
+In de tweede test had ik drie kleine demo's gemaakt om verschillende functionaleiten te testen. Eric was hier erg positief over, maar wilde uiteindelijk toch alles bij elkaar zien. Hij houd van veel feedback zij die. Op deze manier kon ik verder itereren over mijn concept en had ik nieuwe ideeën gekregen om te laten testen in de volgende demo.
+
+Ik had voor de laatste test alle huidige feedback van Eric mee genomen en alle functionaliteiten toegevoegd aan een grote demo. Ook heb ik mijzelf opengesteld voor een ander klein concept door middel van een chat met `comic speech bubbles` te maken. Hij was over beide demo's positief alleen het `comic` concept was wat minder, doordat hij niet zo goed wist hoe het zou werken op een mobiel. Dit heb ik mee genomen en daarna heb ik het concept losgelaten en verder gegaan met mijn andere concept.
+
+In het algemeen vond ik het testen super goed gaan. Eric heeft altijd veel te zeggen over de demo's en heeft soms nog wel wat moeite met hardop praten tijdens de demo dus dit moet je goed van te voren vragen om te doen. Zoals ik in het begin vertelde kan Eric erg goed overweg met zijn computer en merk je niet direct dat hij een daadwerkelijke disability heeft en was het testen hierdoor ook een stuk makkelijker.
+
 ### Reflectie
+
+
 
 
 ## Sources
