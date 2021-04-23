@@ -232,6 +232,8 @@ In de tweede test sessie had iedereen zijn eigen demo gemaakt om deze te laten z
 
 [Uitleg demo](https://github.com/RooyyDoe/human-centered-design-2021/wiki/Uitleg-demo-test-sessie-2)
 
+---
+
 ### Laatste test sessie met Eric
 
 In onze laatste test sessie had iedereen weer een demo klaar staan om door Eric te laten testen. Wat ik merkte tijdens de testen was voornamelijk dat iedereen die `body language` als cases had gekozen heel snel naar de oplossing: **Camera** ging. Op deze manier kan je natuurlijk heel makkelijke `body language` overbrengen. Zelf had ik na de vorige test al besloten dat ik dit niet wilde en had ik dus mijn demo's verder uitgebreid op mijn bevindingen van de tweede test. Eric had in de tweede test verschillende punten van feedback gegeven waarnaar ik zou kunnen kijken. Dit heb ik uiteraard mee genomen in deze demo.
@@ -240,9 +242,17 @@ In onze laatste test sessie had iedereen weer een demo klaar staan om door Eric 
 
 [Uitleg demo](https://github.com/RooyyDoe/human-centered-design-2021/wiki/Uitleg-demo-test-sessie-3)
 
+---
+
 ### 4 Design Principles
 
 [Design Principles with Eric](https://github.com/RooyyDoe/human-centered-design-2021/wiki/Design-principles)
+
+---
+
+### Uiteindelijke veranderingen
+
+**Veranderingen...**
 
 ## Conclusie
 
@@ -264,8 +274,13 @@ In het algemeen vond ik het testen super goed gaan. Eric heeft altijd veel te ze
 
 ### Reflectie
 
+In het begin van het vak was het even aanpoten, doordat ik niet zo snel wist welke van de twee cases ik wilde gaan doen en ze beide eigenlijk best wel lastig waren. Ik vond het hierdoor ook erg fijn dat we met ze alle de eerste demo hadden gemaakt en dat ik uiteindelijk bij de `body language` groep ben beland. Uiteindelijk viel alles op zijn plek en had ik eindelijk een concept bedacht die ik voor Eric wilde gaan maken.
 
+Eric zelf is een gezellig man die wel van een grapje houd, maar ook erg serieus kan zijn tijdens een demo. Hij laat ook alles horen tijdens de demo, wanneer iets niet fijn is of wanneer wat leuk/gaaf is. Dit vond ik zelf heel fijn, want dan weet je precies wanneer je op de goede weg zit en wat je nog moet aanpassen om een beter prototype te maken voor Eric. 
 
+Tijdens het testen had ik soms wel wat moeite met me mond houden en wilde ik al snel Eric gaan begeleiden door de demo's heen. Dit moet ik wat minder doen in het vervolg. Toch had ik elke test sessie genoeg feedback om mee te nemen en mijn demo om te toveren naar een nieuwe. Dit proces vond ik erg fijn en de samenwerking met Eric was hierbij ook erg goed. 
+
+Al met al vond ik het vak een grote leer curve hebben en moest ik in het begin even inkomen, maar nu we tegen het einde aanlopen ben ik erg blij met mijn resultaten.
 
 ## Sources
 
