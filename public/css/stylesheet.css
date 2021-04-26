@@ -84,7 +84,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  opacity: 0.15;
+  opacity: 0.1;
 }
 
 #background-image:after {
@@ -124,7 +124,7 @@ header {
   padding: 0.1em 0em;
   width: 100%;
   font-size: 1.3em;
-  color: white;
+  color: #000;
   background-color: #dbbb95;
   top: 0;
   position: sticky;
@@ -163,8 +163,8 @@ header {
   color: #000;
   width: 100%;
   background-color: transparent;
-  padding: 0.5em 0.6em;
-  margin: 1em 1em 0em 1em;
+  padding: 0.3em 0.4em;
+  margin: 0.3em 1em -1em 1em;
   cursor: pointer;
 }
 
@@ -180,6 +180,7 @@ input[type="text"] {
 .message-box-wrapper {
   margin: 1em;
   display: flex;
+  align-items: center;
   width: 100%;
 }
 
@@ -351,6 +352,23 @@ li > a {
   font-family: "confused-font", sans-serif;
 }
 
+.microphone {
+  cursor: pointer;
+  border: 1px solid #937341;
+  padding: 0.5em;
+  width: 32px;
+  height: 32px;
+}
+
+.paste {
+  cursor: pointer;
+  border: 1px solid #937341;
+  padding: 0.5em;
+  margin: 1em;
+  width: 32px;
+  height: 32px;
+}
+
 /* COMIC SECTION!!!! */
 
 /* #comic-background-image {
@@ -516,4 +534,286 @@ li > a {
 #comic-message-output-list {
   padding: 2em 1.5em 13em;
   margin-top: -6em;
+}
+
+/* tooltip */
+
+.label {
+  margin: 1em;
+}
+
+.label > .tooltiptext-happy {
+  visibility: visible;
+  width: 15%;
+  background-color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+  left: 4%;
+  bottom: 77%;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.label > .tooltiptext-happy::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 19%;
+  margin-left: -5px;
+  border-width: 9px;
+  border-style: solid;
+  border-color: #fff transparent transparent transparent;
+}
+
+.tooltip-new-message-happy {
+  font-size: 0.7em;
+  font-family: "happy-font", sans-serif;
+}
+
+.label:hover .tooltiptext-happy {
+  visibility: visible;
+  opacity: 1;
+}
+
+.label > .tooltiptext-angry {
+  visibility: visible;
+  width: 15%;
+  background-color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+  left: 16%;
+  bottom: 77%;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.label > .tooltiptext-angry::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 19%;
+  margin-left: -5px;
+  border-width: 9px;
+  border-style: solid;
+  border-color: #fff transparent transparent transparent;
+}
+
+.tooltip-new-message-angry {
+  font-size: 0.7em;
+  font-family: "angry-font", sans-serif;
+}
+
+.label:hover .tooltiptext-angry {
+  visibility: visible;
+  opacity: 1;
+}
+
+.label > .tooltiptext-anxious {
+  visibility: visible;
+  width: 15%;
+  background-color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+  left: 28%;
+  bottom: 77%;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.label > .tooltiptext-anxious::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 19%;
+  margin-left: -5px;
+  border-width: 9px;
+  border-style: solid;
+  border-color: #fff transparent transparent transparent;
+}
+
+.tooltip-new-message-anxious {
+  font-size: 0.6em;
+  font-family: "anxious-font", sans-serif;
+}
+
+.label:hover .tooltiptext-anxious {
+  visibility: visible;
+  opacity: 1;
+}
+
+.label > .tooltiptext-sad {
+  visibility: visible;
+  width: 15%;
+  background-color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+  left: 40%;
+  bottom: 77%;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.label > .tooltiptext-sad::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 19%;
+  margin-left: -5px;
+  border-width: 9px;
+  border-style: solid;
+  border-color: #fff transparent transparent transparent;
+}
+
+.tooltip-new-message-sad {
+  font-size: 0.7em;
+  font-family: "sad-font", sans-serif;
+}
+
+.label:hover .tooltiptext-sad {
+  visibility: visible;
+  opacity: 1;
+}
+
+.label > .tooltiptext-confused {
+  visibility: visible;
+  width: 15%;
+  background-color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+  left: 52%;
+  bottom: 77%;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.label > .tooltiptext-confused::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 19%;
+  margin-left: -5px;
+  border-width: 9px;
+  border-style: solid;
+  border-color: #fff transparent transparent transparent;
+}
+
+.tooltip-new-message-confused {
+  font-size: 0.7em;
+  font-family: "confused-font", sans-serif;
+}
+
+.label:hover .tooltiptext-confused {
+  visibility: visible;
+  opacity: 1;
+}
+
+.label > .tooltiptext-excitement {
+  visibility: visible;
+  width: 15%;
+  background-color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+  left: 64%;
+  bottom: 77%;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.label > .tooltiptext-excitement::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 19%;
+  margin-left: -5px;
+  border-width: 9px;
+  border-style: solid;
+  border-color: #fff transparent transparent transparent;
+}
+
+.tooltip-new-message-excitement {
+  font-size: 0.7em;
+  font-family: "excited-font", sans-serif;
+}
+
+.label:hover .tooltiptext-excitement {
+  visibility: visible;
+  opacity: 1;
+}
+
+.label > .tooltiptext-disgust {
+  visibility: visible;
+  width: 15%;
+  background-color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+  left: 76%;
+  bottom: 77%;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.label > .tooltiptext-disgust::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 19%;
+  margin-left: -5px;
+  border-width: 9px;
+  border-style: solid;
+  border-color: #fff transparent transparent transparent;
+}
+
+.tooltip-new-message-disgust {
+  font-size: 0.7em;
+  font-family: "disgust-font", sans-serif;
+}
+
+.label:hover .tooltiptext-disgust {
+  visibility: visible;
+  opacity: 1;
+}
+
+.tooltip-message-output-happy,
+.tooltip-message-output-angry,
+.tooltip-message-output-anxious,
+.tooltip-message-output-sad,
+.tooltip-message-output-confused,
+.tooltip-message-output-excitement,
+.tooltip-message-output-disgust {
+  padding: 0.1em 1em;
+  width: 68%;
+  border-radius: 0.5em;
+  margin: 1em;
+  background-color: white;
+  border: 1px solid black;
+  color: black;
+  text-align: left;
+}
+
+.tooltiptext-happy > p,
+.tooltiptext-angry > p,
+.tooltiptext-anxious > p,
+.tooltiptext-sad > p,
+.tooltiptext-confused > p,
+.tooltiptext-excitement > p,
+.tooltiptext-disgust > p {
+  color: #937341;
+  margin: -1em 0em 0.5em -2em;
+  padding: 0.1em 1.8em;
+  opacity: 0.6;
+  font-style: italic;
 }

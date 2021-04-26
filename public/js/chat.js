@@ -8,6 +8,29 @@ const btn = document.getElementById('send-button')
 const output = document.getElementById('message-output-list')
 const feedback = document.getElementById('new-feedback')
 
+const happyButton = document.getElementById('happy')
+const happyHover = document.querySelector('.tooltip-message-output-happy')
+
+const angryButton = document.getElementById('angry')
+const angryHover = document.querySelector('.tooltip-message-output-angry')
+
+const anxiousButton = document.getElementById('anxious')
+const anxiousHover = document.querySelector('.tooltip-message-output-anxious')
+
+const sadButton = document.getElementById('sad')
+const sadHover = document.querySelector('.tooltip-message-output-sad')
+
+const confusedButton = document.getElementById('confused')
+const confusedHover = document.querySelector('.tooltip-message-output-confused')
+
+const excitementButton = document.getElementById('excitement')
+const excitementHover = document.querySelector('.tooltip-message-output-excitement')
+
+const disgustButton = document.getElementById('disgust')
+const disgustHover = document.querySelector('.tooltip-message-output-disgust')
+
+console.log(happyHover, happyButton)
+
 let name = prompt('What is your name?')
 let timeout
 
@@ -15,7 +38,63 @@ if (name == undefined || name == '') {
     name = 'Guest';
 }
 
-// appendMessage('You joined', 'join')
+happyButton.addEventListener('mouseenter', () => {
+    happyHover.classList.add('animate__animated', 'animate__bounceIn');
+    
+    setTimeout(() => {
+        happyHover.classList.remove('animate__animated', 'animate__bounceIn');
+    }, 2000);
+})
+
+angryButton.addEventListener('mouseenter', () => {
+    angryHover.classList.add('animate__animated', 'animate__shakeY');
+    
+    setTimeout(() => {
+        angryHover.classList.remove('animate__animated', 'animate__shakeY');
+    }, 2000);
+})
+
+anxiousButton.addEventListener('mouseenter', () => {
+    anxiousHover.classList.add('animate__animated', 'animate__flash');
+    anxiousHover.style.setProperty('--animate-duration', '2s');
+    
+    setTimeout(() => {
+        anxiousHover.classList.remove('animate__animated', 'animate__flash');
+    }, 2000);
+})
+
+sadButton.addEventListener('mouseenter', () => {
+    sadHover.classList.add('animate__animated', 'animate__fadeIn');
+    sadHover.style.setProperty('--animate-duration', '3s');
+    
+    setTimeout(() => {
+        sadHover.classList.remove('animate__animated', 'animate__fadeIn');
+    }, 2000);
+})
+
+confusedButton.addEventListener('mouseenter', () => {
+    confusedHover.classList.add('animate__animated', 'animate__shakeX');
+    
+    setTimeout(() => {
+        confusedHover.classList.remove('animate__animated', 'animate__shakeX');
+    }, 2000);
+})
+
+excitementButton.addEventListener('mouseenter', () => {
+    excitementHover.classList.add('animate__animated', 'animate__tada');
+    
+    setTimeout(() => {
+        excitementHover.classList.remove('animate__animated', 'animate__tada');
+    }, 2000);
+})
+
+disgustButton.addEventListener('mouseenter', () => {
+    disgustHover.classList.add('animate__animated', 'animate__swing');
+    
+    setTimeout(() => {
+        disgustHover.classList.remove('animate__animated', 'animate__swing');
+    }, 2000);
+})
 
 socket.emit('new-user', name)
 
