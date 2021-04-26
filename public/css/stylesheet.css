@@ -130,6 +130,13 @@ header {
   position: sticky;
 }
 
+.head-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0em 5em 0em 2em;
+}
+
 .header > h2 {
   margin: 0;
   text-transform: uppercase;
@@ -154,6 +161,11 @@ header {
 
 .emotion-wrapper {
   display: flex;
+  flex-wrap: wrap;
+}
+
+.emotion-wrapper-comic {
+  display: none;
   flex-wrap: wrap;
 }
 
@@ -816,4 +828,23 @@ li > a {
   padding: 0.1em 1.8em;
   opacity: 0.6;
   font-style: italic;
+}
+
+input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+}
+
+label[for="comic"],
+label[for="normal"] {
+  display: inline-block;
+  cursor: pointer;
+  border: 1px solid #937341;
+  padding: 0.5em 0.6em;
+  margin: 0.5em;
+}
+
+#recording-instructions {
+  padding-left: 1em;
+  padding-right: 1em;
 }

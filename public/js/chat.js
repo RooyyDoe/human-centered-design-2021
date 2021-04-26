@@ -1,6 +1,16 @@
+// Help from: https://tutorialzine.com/2017/08/converting-from-speech-to-text-with-javascript
+
 const socket = io();
 
 const inputs = document.querySelectorAll('button')
+
+const radioInputs = document.querySelectorAll('input[type="radio"]')
+
+const comicRadioButton = document.getElementById('comic')
+const normalRadioButton = document.getElementById('normal')
+
+const normalEmotion = document.querySelector('.emotion-wrapper')
+const comicEmotion = document.querySelector('.emotion-wrapper-comic')
 
 const messageForm = document.getElementById('send-container')
 const messageInput = document.getElementById('message')
@@ -29,7 +39,76 @@ const excitementHover = document.querySelector('.tooltip-message-output-exciteme
 const disgustButton = document.getElementById('disgust')
 const disgustHover = document.querySelector('.tooltip-message-output-disgust')
 
-console.log(happyHover, happyButton)
+const recordButton = document.getElementById('start-record-btn')
+const pasteButton = document.getElementById('paste-record-btn')
+const instructions = document.getElementById('recording-instructions')
+
+const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+const recognition = new SpeechRecognition();
+
+let messageContent = '';
+
+recognition.continuous = true;
+
+// This block is called every time the Speech APi captures a line. 
+recognition.onresult = function(event) {
+
+  // event is a SpeechRecognitionEvent object.
+  // It holds all the lines we have captured so far. 
+  // We only need the current one.
+  var current = event.resultIndex;
+
+  // Get a transcript of what was said.
+  var transcript = event.results[current][0].transcript;
+
+  // Add the current transcript to the contents of our Note.
+  // There is a weird bug on mobile, where everything is repeated twice.
+  // There is no official solution so far so we have to handle an edge case.
+  var mobileRepeatBug = (current == 1 && transcript == event.results[0][0].transcript);
+
+  if(!mobileRepeatBug) {
+    messageContent += transcript
+    message.value = messageContent
+  }
+};
+
+recognition.onstart = function() { 
+  instructions.textContent = 'Voice recognition activated. Try speaking into the microphone.'
+}
+
+recognition.onspeechend = function() {
+  instructions.textContent = 'You were quiet for a while so voice recognition turned itself off.'
+}
+
+recognition.onerror = function(event) {
+  if(event.error == 'no-speech') {
+    instructions.textContent = 'No speech was detected. Try again.'
+  };
+}
+
+recordButton.addEventListener('click', () => {
+    if (messageContent.length) {
+        messageContent += ' ';
+      }
+    recognition.start();
+})
+
+pasteButton.addEventListener('click', () => {
+    recognition.stop();
+
+    if(!messageContent.length) {
+      instructions.textContent = 'Could not save empty note. Please add a message to your note.'
+    }
+    else {
+  
+      // Reset variables and update UI.
+      messageContent = '';
+      message.value = ''
+      instructions.textContent = 'Note saved successfully.'
+    }
+        
+})
+
 
 let name = prompt('What is your name?')
 let timeout
@@ -37,6 +116,26 @@ let timeout
 if (name == undefined || name == '') {
     name = 'Guest';
 }
+
+comicRadioButton.addEventListener('click', () => {
+    if(comicRadioButton.checked = true) {
+        normalEmotion.style.display = 'none'
+        comicEmotion.style.display = 'flex'
+    } else {
+        normalEmotion.style.display = 'flex'
+        comicEmotion.style.display = 'none'
+    }
+})
+
+normalRadioButton.addEventListener('click', () => {
+    if(normalRadioButton.checked = true) {
+        normalEmotion.style.display = 'flex'
+        comicEmotion.style.display = 'none'
+    } else {
+        normalEmotion.style.display = 'none'
+        comicEmotion.style.display = 'flex'
+    }
+})
 
 happyButton.addEventListener('mouseenter', () => {
     happyHover.classList.add('animate__animated', 'animate__bounceIn');
@@ -115,6 +214,12 @@ socket.on('own-chat-message', (message, name, emotion) => {
         excitementMessage(message, name, 'own-message')
     } else if(emotion === 'disgust') {
         disgustMessage(message, name, 'own-message')
+    } else if(emotion === 'comic-angry') {
+        comicAngryMessage(message, 'own-message')
+    } else if(emotion === 'comic-neutral') {
+        comicNeutralMessage(message, 'own-message')
+    } else if(emotion === 'comic-anxious') {
+        comicAnxiousMessage(message, 'own-message')
     } else {
         normalMessage(message, name, 'own-message')
     }
@@ -136,6 +241,12 @@ socket.on('their-chat-message', (message, name, emotion) => {
         excitementMessage(message, name, 'their-message')
     } else if(emotion === 'disgust') {
         disgustMessage(message, name, 'their-message')
+    } else if(emotion === 'comic-angry') {
+        comicAngryMessage(message, 'their-message')
+    } else if(emotion === 'comic-neutral') {
+        comicNeutralMessage(message, 'their-message')
+    } else if(emotion === 'comic-anxious') {
+        comicAnxiousMessage(message, 'their-message')
     } else {
         normalMessage(message, name)
     }
@@ -410,6 +521,77 @@ const disgustMessage = (message, username, style) => {
     scrollDown()
 }
 
+const comicAngryMessage = (message, style) => {
+
+    const messageElement = document.createElement('div')
+    const newMessage = document.createElement('p')
+
+    messageElement.classList.add('message-output')
+    messageElement.classList.add(style);
+    
+    newMessage.innerText = message
+
+    messageElement.classList.add('comic-angry')
+    messageElement.classList.add('animate__animated', 'animate__zoomIn');
+    messageElement.style.setProperty('--animate-duration', '.2s');
+    newMessage.classList.add('new-message')
+
+    if(message) {
+        output.append(messageElement)
+        messageElement.append(newMessage)
+    }
+
+    messageInput.value = ''
+    scrollDown()
+}
+
+const comicNeutralMessage = (message, style) => {
+
+    const messageElement = document.createElement('div')
+    const newMessage = document.createElement('p')
+
+    messageElement.classList.add('message-output')
+    messageElement.classList.add(style);
+    
+    newMessage.innerText = message
+
+    messageElement.classList.add('comic-neutral')
+    messageElement.classList.add('animate__animated', 'animate__zoomIn');
+    messageElement.style.setProperty('--animate-duration', '.2s');
+    newMessage.classList.add('new-message')
+
+    if(message) {
+        output.append(messageElement)
+        messageElement.append(newMessage)
+    }
+
+    messageInput.value = ''
+    scrollDown()
+}
+
+const comicAnxiousMessage = (message, style) => {
+
+    const messageElement = document.createElement('div')
+    const newMessage = document.createElement('p')
+
+    messageElement.classList.add('message-output')
+    messageElement.classList.add(style);
+    
+    newMessage.innerText = message
+
+    messageElement.classList.add('comic-anxious')
+    messageElement.classList.add('animate__animated', 'animate__zoomIn');
+    messageElement.style.setProperty('--animate-duration', '.2s');
+    newMessage.classList.add('new-message')
+
+    if(message) {
+        output.append(messageElement)
+        messageElement.append(newMessage)
+    }
+
+    messageInput.value = ''
+    scrollDown()
+}
 
 inputs.forEach(input => {
     input.addEventListener('click', event => {
@@ -452,6 +634,24 @@ inputs.forEach(input => {
             messageInput.value = ''
 
         } else if(input.value === 'confused') {
+
+            const message = messageInput.value
+            socket.emit('send-message', message, input.value)
+            messageInput.value = ''
+
+        } else if(input.value === 'comic-angry') {
+
+            const message = messageInput.value
+            socket.emit('send-message', message, input.value)
+            messageInput.value = ''
+
+        } else if(input.value === 'comic-neutral') {
+
+            const message = messageInput.value
+            socket.emit('send-message', message, input.value)
+            messageInput.value = ''
+
+        } else if(input.value === 'comic-anxious') {
 
             const message = messageInput.value
             socket.emit('send-message', message, input.value)

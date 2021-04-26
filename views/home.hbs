@@ -80,10 +80,37 @@
                 <button id="disgust" value="disgust">Disgust 🤮</button>
             </div>
         </div>
+        <div class="emotion-wrapper-comic">
+            {{!-- <div class="comic-label">
+                <button id="happy" value="happy">Happy</button>
+            </div> --}}
+            <div class="comic-label">
+                <button id="comic-angry" value="comic-angry">Angry</button>
+            </div>
+            {{!-- <div class="comic-label">
+                <button id="excitement" value="excitement">Excitement</button>
+            </div> --}}
+            <div class="comic-label">
+                <button id="comic-neutral" value="comic-neutral">Neutral</button>
+            </div>
+            {{!-- <div class="comic-label">
+                <button id="sad" value="sad">Sad</button>
+            </div> --}}
+            <div class="comic-label">
+                <button id="comic-anxious" value="comic-anxious">Anxious</button>
+            </div>
+            {{!-- <div class="comic-label">
+                <button id="disgust" value="disgust">Disgust</button>
+            </div> --}}
+            {{!-- <div class="comic-label">
+                <button id="confused" value="confused">Confused</button>
+            </div> --}}
+        </div>
         <div class="message-box-wrapper">
             <input type="text" id="message" autocomplete="off" placeholder="Type your message..." autofocus>
-            <img class="paste" src="/images/back-arrow.svg" alt="paste text">
-            <img class="microphone" src="/images/microphone.svg" alt="speech now!">
+            <img class="paste" id="paste-record-btn" title="Pause Recording" src="/images/back-arrow.svg" alt="paste text">
+            <img class="microphone" id="start-record-btn" title="Start Recording" src="/images/microphone.svg" alt="speech now!">
+            <p id="recording-instructions">Press the <strong>Start Recognition</strong> button and allow access.</p>
         </div>
     </div>
 </div>
