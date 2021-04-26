@@ -10,15 +10,15 @@ Voor dit vak krijg je een ontwerp-opdracht die je gaat maken voor 1 mens. Een ec
 
 > #### Voor Eric zijn emoji’s niet goed genoeg. Eric wil betere en krachtigere tools om emotie en *body language* te gebruiken in chat apps zoals Signal.
 
-Uit de eerste test sessie kwam voornamelijk naar voren dat er teveel emoties bestaan zonder een duidelijke context. Wanneer er een emoticon of gif aan het einde van een bericht wordt geplaatst, kunnen sommige chat berichten volledig uit context worden over gebracht. Eric vertelde dat het ook moeilijk is om via een chat applicatie de body language van een persoon te zien, omdat je elkaar niet daadwerkelijk face to face kan zien. Op deze manier kunnen berichten snel uit de context vallen en kunnen er conflicten ontstaan die helemaal niet nodig zijn.
+Uit de eerste test sessie kwam voornamelijk naar voren dat er teveel emoties bestaan zonder dat deze een duidelijke context hebben. Wanneer er een emoticon of gif aan het einde van een bericht wordt geplaatst, kunnen deze chat berichten verkeerd overkomen. Eric vertelde dat hij het moeilijk vond om via een chat applicatie de body language van een persoon te zien, omdat je elkaar niet daadwerkelijk face to face kan zien.
 
 ### Concept
 
-In deze applicatie kan Eric zijn `body language` overbrengen door middel van het sturen van berichten. Wanneer Eric een bericht heeft getypt kan hij deze versturen door op een van de `emotie knoppen` te drukken. Als Eric geen specifieke emotie wil geven aan een bericht kan hij op enter klikken om een neutraal bericht te versturen. De `emotie knoppen` zijn gebaseerd op de meest voorkomende emoties vanuit het dagelijks leven van de mens. Om de `body language` door te geven aan de andere persoon maakt deze applicatie gebruik van **animaties, lettertype en een emotie status**.
+In deze applicatie kan Eric zijn `body language` overbrengen door middel van het sturen van berichten. Wanneer Eric een bericht heeft getypt of ingesproken kan hij deze versturen door op een van de `emotie knoppen` te drukken. Als Eric geen specifieke emotie wil geven aan een bericht kan hij op enter klikken om een neutraal bericht te versturen. De `emotie knoppen` zijn gebaseerd op de meest voorkomende emoties vanuit het dagelijks leven van de mens. Om de `body language` door te geven aan de andere persoon maakt deze applicatie gebruik van **animaties, lettertype en een emotie status**.
 
 ## Uiteindelijke ontwerp
 
-**Images still loading...**
+<img width="1552" alt="Schermafbeelding 2021-04-26 om 14 08 06" src="https://user-images.githubusercontent.com/40355914/116080067-e90b3e00-a698-11eb-833d-e83d6384933a.png">
 
 ### Inhoudsopgave
 
@@ -88,7 +88,7 @@ Eric is een ontwerper van 48 jaar. Hij heeft gestudeerd aan de HKU, interaction 
 
 ### Eerste test sessie met Eric
 
-In deze test sessie hebben wij kennis gemaakt met Eric en heeft hij ons van alles verteld over wat hij in het dagelijks leven doet. Ook hebben we twee klein schalige prototypes gemaakt om deze door Eric te laten testen. Naast deze kleine prototypes hebben wij hem ook dood gegooid met veel vragen om wat meer te weten te komen hoe Eric is in de omgang met bijvoorbeeld zijn computer. Alle verdere informatie is te vinden in het test verslag hieronder.
+In de eerste test sessie hebben wij kennis gemaakt met Eric en heeft hij ons van alles verteld over wat hij in het dagelijks leven doet. Ook hebben we twee klein schalige prototypes gemaakt om deze door Eric te laten testen. Naast deze kleine prototypes hebben wij hem ook een aantal vragen gesteld om wat meer te weten te komen over Eric. Vragen over hoe Eric bijvoorbeeld omgaat met zijn computer. Alle verdere informatie is te vinden in het test verslag hieronder.
 
 [Test sessie #1](https://github.com/RooyyDoe/human-centered-design-2021/wiki/Test-sessie-1-Kennis-making-(Eric-Groot-Kormelink)
 
@@ -234,10 +234,8 @@ In deze test sessie hebben wij kennis gemaakt met Eric en heeft hij ons van alle
   
   ### Het niet begrijpen van `body language` tijdens chatten
   
-  Doordat je elkaar tijdens het chatten niet kan zien behalve als je dus daadwerkelijk een camera aan doet is het lastig om elkaars body language te lezen en kunnen berichten dus snel uit context vallen. Er zijn op het internet genoeg onderzoeken gedaan hoe je het beste body language kan lezen van mensen, maar er is weinig te vinden over hoe dit gedaan wordt via chat message. 
-  
-  Zelf heb ik hier ook last van. Ik gebruik vaak emoticons aan het einde van mijn zinnen om op deze manier de zin wat informeler over te laten komen. Dit gaat af en toe fout waardoor de hele zin in een andere context wordt opgevallen. Dit wil ik dus gaan verkomen in mijn applicaties om eigenlijk zo min mogelijk tot niet gebruik te maken van emoticons. 
-  
+  Doordat je elkaar tijdens het chatten niet kan zien behalve als je een camera aan doet is het lastig om elkaars body language te lezen en kunnen berichten dus snel uit context vallen. Er zijn op het internet genoeg onderzoeken gedaan hoe je het beste body language kan lezen van mensen, maar er is weinig te vinden over hoe dit gedaan wordt via chat message. 
+ 
   > Without the benefit of body language, you run a higher risk of misinterpreting the meaning of
 communications. You don't see that wink after a sarcastic statement. You don't know how to
 interpret that exclamation point (is it excitement or anger?). You don't know if a one-word
@@ -250,7 +248,7 @@ statement of acknowledgement – like "Noted" – means anything more than what 
 
 ### Tweede test sessie met Eric
 
-In de tweede test sessie had iedereen zijn eigen demo gemaakt om deze te laten zien aan Eric. In de eerste test hadden we getest hoe Eric het vond om voor de camera te staan en als je er overna denkt is dit inderdaad een simpele oplossing. Na nogmaals de cases doorlezen te hebben, wilde ik in mijn concept de focus meer leggen op hoe ik body language kan overbrengen via daadwerkelijke chat berichten. Hier had ik drie verschillende demo's voor gemaakt; Kleur, Animaties en status tekst onder een chat bericht. Naast deze demo's heb ik Eric ook een aantal extra vragen gesteld om wat extra informatie te krijgen tijdens mijn onderzoek.
+In de tweede test sessie had iedereen zijn eigen demo gemaakt om deze te laten testen door Eric. Tijdens de eerste test sessie hadden we getest hoe Eric het vond om voor de camera te staan en als je er overna denkt is dit inderdaad een simpele oplossing voor de cases. Na nogmaals de cases doorlezen te hebben, wilde ik in mijn concept de focus meer leggen op hoe ik body language kan overbrengen via daadwerkelijke chat berichten. Hier had ik drie verschillende demo's voor gemaakt; Kleur, Animaties en status tekst onder een chat bericht. Naast deze demo's heb ik Eric ook een aantal extra vragen gesteld om wat extra informatie te krijgen tijdens mijn onderzoek.
 
 [Test sessie #2](https://github.com/RooyyDoe/human-centered-design-2021/wiki/Test-sessie-2-(Eric-Groot-Kormelink))
 
@@ -284,11 +282,11 @@ In onze laatste test sessie had iedereen weer een demo klaar staan om door Eric 
 
 ### Uiteindelijke veranderingen
 
-**Veranderingen...**
+[Uiteindelijke veranderingen](https://github.com/RooyyDoe/human-centered-design-2021/wiki/Uiteindelijke-veranderingen-prototype)
 
 ### User needs
 
-Tijdens de kennis making met Eric kom je natuurlijk achter veel dingen. Wat voor persoon hij is en hoe hij zich gedraagd tijdens de test gesprekken, maar ook hoeveel moeite die heeft met zijn disability. Ook al heeft Eric deze disability het voelt niet alsof hij veel minder kan dan dat wij kunnen op het internet. Hij kan perfect overweg met zijn muis en toetsenbord, maar heeft alleen moeilijkheden met toets combinaties en druk zetten op een punt. Met dit soort moeilijkheden moet je dan rekening houden tijdens het maken van de prototypes. Als je kijkt naar de design principes die we moeten gebruiken dan denk je bij de user needs al snel aan `study situation` en `Prioritize identity`.
+Tijdens de kennis making met Eric kom je natuurlijk achter veel dingen. Wat voor persoon hij is en hoe hij zich gedraagd tijdens de test gesprekken, maar ook hoeveel moeite die heeft met zijn disability. Ook al heeft Eric deze disability, het voelt niet alsof hij veel minder kan dan dat wij kunnen op het internet. Hij kan perfect overweg met zijn muis en toetsenbord, maar heeft alleen moeilijkheden met toets combinaties en druk zetten op een punt. Met dit soort moeilijkheden moet je dan rekening houden tijdens het maken van de prototypes. Als je kijkt naar de design principes die we moeten gebruiken dan denk je bij de user needs al snel aan `study situation` en `Prioritize identity`.
 
 Tijdens het testen kom je achter de identiteit van Eric, wat hij leuk vind om te doen en waar hij zich mee bezig houd. Op deze manier kom je al snel achter wat de user needs zijn van Eric en kan je dit mee nemen in je prototypes. Wanneer je weet wat Eric leuk vind kan je dit in je achterhoofd houden bij het verzinnen van een concept en daar dan op verder itereren. 
 
@@ -298,7 +296,7 @@ Wij hebben als groep drie test sessie gehad met Eric. Tijdens de eerste test ses
 
 In de tweede test had ik drie kleine demo's gemaakt om verschillende functionaleiten te testen. Eric was hier erg positief over, maar wilde uiteindelijk toch alles bij elkaar zien. Hij houd van veel feedback zij die. Op deze manier kon ik verder itereren over mijn concept en had ik nieuwe ideeën gekregen om te laten testen in de volgende demo.
 
-Ik had voor de laatste test alle huidige feedback van Eric mee genomen en alle functionaliteiten toegevoegd aan een grote demo. Ook heb ik mijzelf opengesteld voor een ander klein concept door middel van een chat met `comic speech bubbles` te maken. Hij was over beide demo's positief alleen het `comic` concept was wat minder, doordat hij niet zo goed wist hoe het zou werken op een mobiel. Dit heb ik mee genomen en daarna heb ik het concept losgelaten en verder gegaan met mijn andere concept.
+Ik had voor de laatste test alle huidige feedback van Eric mee genomen en alle functionaliteiten toegevoegd aan een grote demo. Ook heb ik mijzelf opengesteld voor een ander klein concept door middel van een chat met `comic speech bubbles` te maken. Hij was over beide demo's positief alleen het `comic` concept was wat minder, doordat hij niet zo goed wist hoe het zou werken op een mobiel. Dit heb ik mee genomen in mijn uiteindelijke concept. het sturen van Comic berichten is nu een extra `add nonsense` feature geworden.
 
 In het algemeen vond ik het testen super goed gaan. Eric heeft altijd veel te zeggen over de demo's en heeft soms nog wel wat moeite met hardop praten tijdens de demo dus dit moet je goed van te voren vragen om te doen. Zoals ik in het begin vertelde kan Eric erg goed overweg met zijn computer en merk je niet direct dat hij een daadwerkelijke disability heeft en was het testen hierdoor ook een stuk makkelijker.
 
@@ -310,7 +308,7 @@ Eric zelf is een gezellig man die wel van een grapje houd, maar ook erg serieus 
 
 Tijdens het testen had ik soms wel wat moeite met me mond houden en wilde ik al snel Eric gaan begeleiden door de demo's heen. Dit moet ik wat minder doen in het vervolg. Toch had ik elke test sessie genoeg feedback om mee te nemen en mijn demo om te toveren naar een nieuwe. Dit proces vond ik erg fijn en de samenwerking met Eric was hierbij ook erg goed. 
 
-Al met al vond ik het vak een grote leer curve hebben en moest ik in het begin even inkomen, maar nu we tegen het einde aanlopen ben ik erg blij met mijn resultaten.
+Al met al vond ik het vak een grote leer curve hebben en moest ik in het begin even inkomen, maar nu we tegen het einde aanlopen ben ik erg blij met mijn resultaten en uiteindelijke applicatie.
 
 ## Bronnen
 
