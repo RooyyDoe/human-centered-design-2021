@@ -90,7 +90,7 @@ Eric is een ontwerper van 48 jaar. Hij heeft gestudeerd aan de HKU, interaction 
 
 In de eerste test sessie hebben wij kennis gemaakt met Eric en heeft hij ons van alles verteld over wat hij in het dagelijks leven doet. Ook hebben we twee kleinschalige prototypes gemaakt om deze door Eric te laten testen. Naast deze kleine prototypes hebben wij hem ook een aantal vragen gesteld om wat meer te weten te komen over Eric. Vragen over hoe Eric bijvoorbeeld omgaat met zijn computer. Alle verdere informatie is te vinden in het test verslag hieronder.
 
-[Test sessie #1](https://github.com/RooyyDoe/human-centered-design-2021/wiki/Test-sessie-1-Kennis-making-(Eric-Groot-Kormelink)
+[Test sessie #1](https://github.com/RooyyDoe/human-centered-design-2021/wiki/Test-sessie-1-Kennis-making-(Eric-Groot-Kormelink))
 
 #### Extra onderzoek na de test sessie
 
